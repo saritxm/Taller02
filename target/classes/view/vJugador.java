@@ -26,23 +26,226 @@ public class vJugador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        txtTitulo2 = new javax.swing.JLabel();
+        txtJugadores = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JLabel();
+        txtEdad = new javax.swing.JLabel();
+        txtCedula = new javax.swing.JLabel();
+        txtJugador1 = new javax.swing.JLabel();
+        txtJugador2 = new javax.swing.JLabel();
+        txtJugador3 = new javax.swing.JLabel();
+        txtJugador4 = new javax.swing.JLabel();
+        txtJugador5 = new javax.swing.JLabel();
+        txtJugador6 = new javax.swing.JLabel();
+        txtJugador7 = new javax.swing.JLabel();
+        txtJugador8 = new javax.swing.JLabel();
+        cajaNombreJ1 = new javax.swing.JTextField();
+        cajaNombreJ2 = new javax.swing.JTextField();
+        cajaNombreJ3 = new javax.swing.JTextField();
+        cajaNombreJ4 = new javax.swing.JTextField();
+        cajaNombreJ5 = new javax.swing.JTextField();
+        cajaNombreJ6 = new javax.swing.JTextField();
+        cajaNombreJ7 = new javax.swing.JTextField();
+        cajaNombreJ8 = new javax.swing.JTextField();
+        cajaEdadJ1 = new javax.swing.JTextField();
+        cajaEdadJ2 = new javax.swing.JTextField();
+        cajaEdadJ3 = new javax.swing.JTextField();
+        cajaEdadJ4 = new javax.swing.JTextField();
+        cajaEdadJ5 = new javax.swing.JTextField();
+        cajaEdadJ6 = new javax.swing.JTextField();
+        cajaEdadJ7 = new javax.swing.JTextField();
+        cajaEdadJ8 = new javax.swing.JTextField();
+        cajaCedulaJ1 = new javax.swing.JTextField();
+        cajaCedulaJ2 = new javax.swing.JTextField();
+        cajaCedulaJ3 = new javax.swing.JTextField();
+        cajaCedulaJ4 = new javax.swing.JTextField();
+        cajaCedulaJ5 = new javax.swing.JTextField();
+        cajaCedulaJ6 = new javax.swing.JTextField();
+        cajaCedulaJ7 = new javax.swing.JTextField();
+        cajaCedulaJ8 = new javax.swing.JTextField();
+        labelFondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtTitulo2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        txtTitulo2.setForeground(new java.awt.Color(255, 255, 204));
+        txtTitulo2.setText(" ¡Prepárate para la competencia! Inserta a tus jugadores y lucha por la victoria. ");
+        jPanel1.add(txtTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        txtJugadores.setFont(new java.awt.Font("Perpetua Titling MT", 1, 12)); // NOI18N
+        txtJugadores.setText("JUGADORES ");
+        jPanel1.add(txtJugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        txtNombre.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        txtNombre.setText("NOMBRE");
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        txtEdad.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        txtEdad.setText("EDAD");
+        jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        txtCedula.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        txtCedula.setText("CÉDULA");
+        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+
+        txtJugador1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador1.setText("JUGADOR 1");
+        jPanel1.add(txtJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
+
+        txtJugador2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador2.setText("JUGADOR 2");
+        jPanel1.add(txtJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, -1));
+
+        txtJugador3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador3.setText("JUGADOR 3");
+        jPanel1.add(txtJugador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, -1));
+
+        txtJugador4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador4.setText("JUGADOR 4");
+        jPanel1.add(txtJugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+
+        txtJugador5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador5.setText("JUGADOR 5");
+        jPanel1.add(txtJugador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
+
+        txtJugador6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador6.setText("JUGADOR 6");
+        jPanel1.add(txtJugador6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, -1, -1));
+
+        txtJugador7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador7.setText("JUGADOR 7");
+        jPanel1.add(txtJugador7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, -1, -1));
+
+        txtJugador8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        txtJugador8.setText("JUGADOR 8");
+        jPanel1.add(txtJugador8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, -1, -1));
+
+        cajaNombreJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJ1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaNombreJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 90, 30));
+
+        cajaNombreJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJ2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaNombreJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 80, 30));
+
+        cajaNombreJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJ3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaNombreJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 90, 30));
+
+        cajaNombreJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJ4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaNombreJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 90, 30));
+        jPanel1.add(cajaNombreJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 80, 30));
+        jPanel1.add(cajaNombreJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 120, 90, 30));
+        jPanel1.add(cajaNombreJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 120, 80, 30));
+        jPanel1.add(cajaNombreJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 120, 80, 30));
+        jPanel1.add(cajaEdadJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 90, 30));
+        jPanel1.add(cajaEdadJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 30));
+        jPanel1.add(cajaEdadJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 90, 30));
+        jPanel1.add(cajaEdadJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 90, 30));
+        jPanel1.add(cajaEdadJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 80, 30));
+        jPanel1.add(cajaEdadJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 90, 30));
+        jPanel1.add(cajaEdadJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 180, 80, 30));
+        jPanel1.add(cajaEdadJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 180, 80, 30));
+        jPanel1.add(cajaCedulaJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 90, 30));
+        jPanel1.add(cajaCedulaJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 80, 30));
+        jPanel1.add(cajaCedulaJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 90, 30));
+        jPanel1.add(cajaCedulaJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 90, 30));
+
+        cajaCedulaJ5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaCedulaJ5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cajaCedulaJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 80, 30));
+        jPanel1.add(cajaCedulaJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 90, 30));
+        jPanel1.add(cajaCedulaJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 80, 30));
+        jPanel1.add(cajaCedulaJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 240, 80, 30));
+
+        labelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugadores.jpg"))); // NOI18N
+        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cajaNombreJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJ1ActionPerformed
+
+    private void cajaNombreJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJ2ActionPerformed
+
+    private void cajaNombreJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJ3ActionPerformed
+
+    private void cajaNombreJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJ4ActionPerformed
+
+    private void cajaCedulaJ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaCedulaJ5ActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField cajaCedulaJ1;
+    public javax.swing.JTextField cajaCedulaJ2;
+    public javax.swing.JTextField cajaCedulaJ3;
+    public javax.swing.JTextField cajaCedulaJ4;
+    public javax.swing.JTextField cajaCedulaJ5;
+    public javax.swing.JTextField cajaCedulaJ6;
+    public javax.swing.JTextField cajaCedulaJ7;
+    public javax.swing.JTextField cajaCedulaJ8;
+    public javax.swing.JTextField cajaEdadJ1;
+    public javax.swing.JTextField cajaEdadJ2;
+    public javax.swing.JTextField cajaEdadJ3;
+    public javax.swing.JTextField cajaEdadJ4;
+    public javax.swing.JTextField cajaEdadJ5;
+    public javax.swing.JTextField cajaEdadJ6;
+    public javax.swing.JTextField cajaEdadJ7;
+    public javax.swing.JTextField cajaEdadJ8;
+    public javax.swing.JTextField cajaNombreJ1;
+    public javax.swing.JTextField cajaNombreJ2;
+    public javax.swing.JTextField cajaNombreJ3;
+    public javax.swing.JTextField cajaNombreJ4;
+    public javax.swing.JTextField cajaNombreJ5;
+    public javax.swing.JTextField cajaNombreJ6;
+    public javax.swing.JTextField cajaNombreJ7;
+    public javax.swing.JTextField cajaNombreJ8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelFondo;
+    private javax.swing.JLabel txtCedula;
+    private javax.swing.JLabel txtEdad;
+    private javax.swing.JLabel txtJugador1;
+    private javax.swing.JLabel txtJugador2;
+    private javax.swing.JLabel txtJugador3;
+    private javax.swing.JLabel txtJugador4;
+    private javax.swing.JLabel txtJugador5;
+    private javax.swing.JLabel txtJugador6;
+    private javax.swing.JLabel txtJugador7;
+    private javax.swing.JLabel txtJugador8;
+    private javax.swing.JLabel txtJugadores;
+    private javax.swing.JLabel txtNombre;
+    private javax.swing.JLabel txtTitulo2;
     // End of variables declaration//GEN-END:variables
 }
