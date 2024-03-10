@@ -23,8 +23,11 @@ public class controlMain implements ActionListener {
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
 
+        iniciar();
     }
-
+    private void iniciar() {
+        vb.setVisible(true);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vb.btnContinuar){
