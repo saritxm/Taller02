@@ -33,6 +33,12 @@ public class controlMain implements ActionListener {
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
+        this.vj.btnSalirvJ.addActionListener(this);
+        this.vj2.btnSalirvJv2.addActionListener(this);
+        this.vj2.btnRegistrarJv2.addActionListener(this);
+        this.vp.btnSalirP.addActionListener(this);
+        this.vp.btnLanzartejo.addActionListener(this);
+        
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         this.vp.btnSalirP.addActionListener(this);
