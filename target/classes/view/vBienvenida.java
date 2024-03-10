@@ -28,8 +28,8 @@ public class vBienvenida extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        textoTitulo = new javax.swing.JLabel();
+        TextovBienvenida = new javax.swing.JLabel();
         btnContinuar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -37,14 +37,14 @@ public class vBienvenida extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 26)); // NOI18N
-        jLabel2.setText("Campeonato Nacional de Tejo");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 330, 50));
+        textoTitulo.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 26)); // NOI18N
+        textoTitulo.setText("Campeonato Nacional de Tejo");
+        jPanel1.add(textoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 330, 50));
 
-        jLabel3.setFont(new java.awt.Font("Microsoft Uighur", 0, 28)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("¡Demuestra tu habilidad en el tejo y conviértete en el campeón! ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        TextovBienvenida.setFont(new java.awt.Font("Microsoft Uighur", 0, 28)); // NOI18N
+        TextovBienvenida.setForeground(new java.awt.Color(255, 255, 255));
+        TextovBienvenida.setText("¡Demuestra tu habilidad en el tejo y conviértete en el campeón! ");
+        jPanel1.add(TextovBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         btnContinuar.setBackground(new java.awt.Color(255, 255, 102));
         btnContinuar.setText("CONTINUAR");
@@ -78,10 +78,10 @@ public class vBienvenida extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel TextovBienvenida;
     public javax.swing.JButton btnContinuar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel textoTitulo;
     // End of variables declaration//GEN-END:variables
 }
