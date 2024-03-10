@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Random;
+
 public class Player {
     private String nombre;
     private int edad;
@@ -29,6 +31,25 @@ public class Player {
 
     public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+
+    public int lanzarTejo(){
+        Random rand = new Random();
+        int result = rand.nextInt(3);
+        int ans = 0;
+        if(result == 0){
+            ans = 1;
+        }
+        else if(result == 1){
+            ans = 3;
+        }
+        else if(result == 2){
+            ans = 6;
+        }
+        else if(result == 3){
+            ans = 9;
+        }
+         return ans;
     }
     
 }

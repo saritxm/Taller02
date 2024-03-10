@@ -65,6 +65,8 @@ public class vJugador extends javax.swing.JFrame {
         cajaCedulaJ6 = new javax.swing.JTextField();
         cajaCedulaJ7 = new javax.swing.JTextField();
         cajaCedulaJ8 = new javax.swing.JTextField();
+        btnRegistrarJ = new javax.swing.JButton();
+        btnSalirvJ = new javax.swing.JButton();
         labelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -179,6 +181,14 @@ public class vJugador extends javax.swing.JFrame {
         jPanel1.add(cajaCedulaJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 80, 30));
         jPanel1.add(cajaCedulaJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 240, 80, 30));
 
+        btnRegistrarJ.setBackground(new java.awt.Color(255, 204, 204));
+        btnRegistrarJ.setText("REGISTRAR JUGADORES");
+        jPanel1.add(btnRegistrarJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 200, 40));
+
+        btnSalirvJ.setBackground(new java.awt.Color(255, 153, 153));
+        btnSalirvJ.setText("SALIR");
+        jPanel1.add(btnSalirvJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 90, 30));
+
         labelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugadores.jpg"))); // NOI18N
         jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -209,6 +219,8 @@ public class vJugador extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnRegistrarJ;
+    public javax.swing.JButton btnSalirvJ;
     public javax.swing.JTextField cajaCedulaJ1;
     public javax.swing.JTextField cajaCedulaJ2;
     public javax.swing.JTextField cajaCedulaJ3;
