@@ -85,7 +85,7 @@ public class vJugador extends javax.swing.JFrame {
 
         txtNombre.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         txtNombre.setText("NOMBRE");
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         txtEdad.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         txtEdad.setText("EDAD");
@@ -109,7 +109,7 @@ public class vJugador extends javax.swing.JFrame {
 
         txtJugador4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         txtJugador4.setText("JUGADOR 4");
-        jPanel1.add(txtJugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+        jPanel1.add(txtJugador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
 
         txtJugador5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         txtJugador5.setText("JUGADOR 5");
@@ -125,7 +125,7 @@ public class vJugador extends javax.swing.JFrame {
 
         txtJugador8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         txtJugador8.setText("JUGADOR 8");
-        jPanel1.add(txtJugador8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, -1, -1));
+        jPanel1.add(txtJugador8, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 70, -1, -1));
 
         cajaNombreJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +146,7 @@ public class vJugador extends javax.swing.JFrame {
                 cajaNombreJ3ActionPerformed(evt);
             }
         });
-        jPanel1.add(cajaNombreJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 90, 30));
+        jPanel1.add(cajaNombreJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 80, 30));
 
         cajaNombreJ4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,44 +155,52 @@ public class vJugador extends javax.swing.JFrame {
         });
         jPanel1.add(cajaNombreJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 90, 30));
         jPanel1.add(cajaNombreJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 80, 30));
-        jPanel1.add(cajaNombreJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 120, 90, 30));
+        jPanel1.add(cajaNombreJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 90, 30));
+
+        cajaNombreJ7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaNombreJ7ActionPerformed(evt);
+            }
+        });
         jPanel1.add(cajaNombreJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 120, 80, 30));
         jPanel1.add(cajaNombreJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 120, 80, 30));
-        jPanel1.add(cajaEdadJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 90, 30));
-        jPanel1.add(cajaEdadJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 30));
-        jPanel1.add(cajaEdadJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 90, 30));
-        jPanel1.add(cajaEdadJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 90, 30));
+        jPanel1.add(cajaEdadJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 90, 30));
+        jPanel1.add(cajaEdadJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 80, 30));
+        jPanel1.add(cajaEdadJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 80, 30));
+        jPanel1.add(cajaEdadJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 90, 30));
         jPanel1.add(cajaEdadJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 80, 30));
-        jPanel1.add(cajaEdadJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 90, 30));
-        jPanel1.add(cajaEdadJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 180, 80, 30));
-        jPanel1.add(cajaEdadJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 180, 80, 30));
-        jPanel1.add(cajaCedulaJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 90, 30));
-        jPanel1.add(cajaCedulaJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 80, 30));
-        jPanel1.add(cajaCedulaJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 90, 30));
-        jPanel1.add(cajaCedulaJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 90, 30));
+        jPanel1.add(cajaEdadJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 90, 30));
+        jPanel1.add(cajaEdadJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 170, 80, 30));
+        jPanel1.add(cajaEdadJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 170, 80, 30));
+        jPanel1.add(cajaCedulaJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 90, 30));
+        jPanel1.add(cajaCedulaJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 80, 30));
+        jPanel1.add(cajaCedulaJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 80, 30));
+        jPanel1.add(cajaCedulaJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 90, 30));
 
         cajaCedulaJ5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaCedulaJ5ActionPerformed(evt);
             }
         });
-        jPanel1.add(cajaCedulaJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 80, 30));
-        jPanel1.add(cajaCedulaJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 90, 30));
-        jPanel1.add(cajaCedulaJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 80, 30));
-        jPanel1.add(cajaCedulaJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 240, 80, 30));
+        jPanel1.add(cajaCedulaJ5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 80, 30));
+        jPanel1.add(cajaCedulaJ6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 230, 90, 30));
+        jPanel1.add(cajaCedulaJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 230, 80, 30));
+        jPanel1.add(cajaCedulaJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 230, 80, 30));
 
         btnRegistrarJ.setBackground(new java.awt.Color(255, 204, 204));
+        btnRegistrarJ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRegistrarJ.setText("REGISTRAR JUGADORES");
-        jPanel1.add(btnRegistrarJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 200, 40));
+        jPanel1.add(btnRegistrarJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 200, 40));
 
         btnSalirvJ.setBackground(new java.awt.Color(255, 153, 153));
+        btnSalirvJ.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalirvJ.setText("SALIR");
         jPanel1.add(btnSalirvJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 90, 30));
 
         labelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugadores.jpg"))); // NOI18N
-        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 350));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -216,6 +224,10 @@ public class vJugador extends javax.swing.JFrame {
     private void cajaCedulaJ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaCedulaJ5ActionPerformed
+
+    private void cajaNombreJ7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaNombreJ7ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

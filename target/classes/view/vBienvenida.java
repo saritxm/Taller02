@@ -31,6 +31,7 @@ public class vBienvenida extends javax.swing.JFrame {
         textoTitulo = new javax.swing.JLabel();
         TextovBienvenida = new javax.swing.JLabel();
         btnContinuar = new javax.swing.JButton();
+        btnSalir1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,7 +54,16 @@ public class vBienvenida extends javax.swing.JFrame {
                 btnContinuarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 150, 40));
+        jPanel1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 150, 40));
+
+        btnSalir1.setBackground(new java.awt.Color(255, 153, 153));
+        btnSalir1.setText("SALIR");
+        btnSalir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalir1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 90, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanabienv.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 340));
@@ -76,10 +86,15 @@ public class vBienvenida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnContinuarActionPerformed
 
+    private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalir1ActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel TextovBienvenida;
     public javax.swing.JButton btnContinuar;
+    public javax.swing.JButton btnSalir1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel textoTitulo;
