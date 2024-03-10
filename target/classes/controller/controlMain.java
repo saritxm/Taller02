@@ -35,17 +35,14 @@ public class controlMain implements ActionListener {
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
-<<<<<<< HEAD
         this.vj.btnSalirvJ.addActionListener(this);
         this.vj2.btnSalirvJv2.addActionListener(this);
         this.vj2.btnRegistrarJv2.addActionListener(this);
         this.vp.btnSalirP.addActionListener(this);
         this.vp.btnLanzartejo.addActionListener(this);
         
-=======
         //Controladores
         cArchivos = new controlArchivos();
->>>>>>> deccddcd671e65dbd0fb19900c2f9a5b6370ead2
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         iniciar();
