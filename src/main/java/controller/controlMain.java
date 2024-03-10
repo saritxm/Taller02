@@ -27,6 +27,8 @@ public class controlMain implements ActionListener {
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
+        this.vj.btnSalirvJ.addActionListener(this);
+        this.vj2.btnSalirvJv2.addActionListener(this);
 
         iniciar();
     }

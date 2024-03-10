@@ -197,12 +197,10 @@ public class vJugador2 extends javax.swing.JFrame {
         jPanel1.add(cajaCedulaJ8v2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 230, 70, 30));
 
         btnRegistrarJv2.setBackground(new java.awt.Color(102, 255, 153));
-        btnRegistrarJv2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRegistrarJv2.setText("REGISTRAR JUGADORES");
         jPanel1.add(btnRegistrarJv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 200, 40));
 
         btnSalirvJv2.setBackground(new java.awt.Color(102, 255, 102));
-        btnSalirvJv2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalirvJv2.setText("SALIR");
         jPanel1.add(btnSalirvJv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 90, 30));
 
@@ -214,23 +212,23 @@ public class vJugador2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cajaNombreJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ1ActionPerformed
+    private void cajaNombreJ1v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNombreJ1ActionPerformed
 
-    private void cajaNombreJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ2ActionPerformed
+    private void cajaNombreJ2v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNombreJ2ActionPerformed
 
-    private void cajaNombreJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ3ActionPerformed
+    private void cajaNombreJ3v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNombreJ3ActionPerformed
 
-    private void cajaNombreJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ4ActionPerformed
+    private void cajaNombreJ4v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaNombreJ4ActionPerformed
 
-    private void cajaCedulaJ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
+    private void cajaCedulaJ5v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaCedulaJ5ActionPerformed
 

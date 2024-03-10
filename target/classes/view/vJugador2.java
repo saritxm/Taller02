@@ -6,16 +6,16 @@ package view;
 
 /**
  *
- * @author Sara
+ * @author nahin
  */
 
- public class vJugador2 extends javax.swing.JFrame {
+public class vJugador2 extends javax.swing.JFrame {
 
     /**
      * Creates new form vJugador
      */
     public vJugador2() {
-        setTitle("Registro de jugadores: 2 partida");
+        setTitle("Registro de jugadores");
         initComponents();
     }
 
@@ -68,7 +68,7 @@ package view;
         cajaCedulaJ8v2 = new javax.swing.JTextField();
         btnRegistrarJv2 = new javax.swing.JButton();
         btnSalirvJv2 = new javax.swing.JButton();
-        labelFondov2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -197,48 +197,42 @@ package view;
         jPanel1.add(cajaCedulaJ8v2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 230, 70, 30));
 
         btnRegistrarJv2.setBackground(new java.awt.Color(102, 255, 153));
+        btnRegistrarJv2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRegistrarJv2.setText("REGISTRAR JUGADORES");
         jPanel1.add(btnRegistrarJv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 200, 40));
 
         btnSalirvJv2.setBackground(new java.awt.Color(102, 255, 102));
+        btnSalirvJv2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSalirvJv2.setText("SALIR");
         jPanel1.add(btnSalirvJv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 90, 30));
 
-        labelFondov2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugadoresv2.jpg"))); // NOI18N
-        jPanel1.add(labelFondov2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugadoresv2.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 360));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cajaNombreJ1v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ1v2ActionPerformed
+    private void cajaNombreJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaNombreJ1v2ActionPerformed
+    }//GEN-LAST:event_cajaNombreJ1ActionPerformed
 
-    private void cajaNombreJ2v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ2v2ActionPerformed
+    private void cajaNombreJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaNombreJ2v2ActionPerformed
+    }//GEN-LAST:event_cajaNombreJ2ActionPerformed
 
-    private void cajaNombreJ3v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ3v2ActionPerformed
+    private void cajaNombreJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaNombreJ3v2ActionPerformed
+    }//GEN-LAST:event_cajaNombreJ3ActionPerformed
 
-    private void cajaNombreJ4v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ4v2ActionPerformed
+    private void cajaNombreJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaNombreJ4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaNombreJ4v2ActionPerformed
+    }//GEN-LAST:event_cajaNombreJ4ActionPerformed
 
-    private void cajaCedulaJ5v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5v2ActionPerformed
+    private void cajaCedulaJ5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cajaCedulaJ5v2ActionPerformed
-
-    private void cajaEdadJ8v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaEdadJ8v2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cajaEdadJ8v2ActionPerformed
-
-    private void cajaCedulaJ3v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ3v2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cajaCedulaJ3v2ActionPerformed
+    }//GEN-LAST:event_cajaCedulaJ5ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -268,8 +262,8 @@ package view;
     public javax.swing.JTextField cajaNombreJ6v2;
     public javax.swing.JTextField cajaNombreJ7v2;
     public javax.swing.JTextField cajaNombreJ8v2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel labelFondov2;
     private javax.swing.JLabel txtCedulav2;
     private javax.swing.JLabel txtEdadv2;
     private javax.swing.JLabel txtJugador1v2;
