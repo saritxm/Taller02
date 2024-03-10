@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "controller.test",
+            "projectName": "Taller02"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -16,6 +23,6 @@
             "request": "launch",
             "mainClass": "controller.Launcher",
             "projectName": "Taller02"
-        },
+        }
     ]
 }
