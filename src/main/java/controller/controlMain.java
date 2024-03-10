@@ -16,12 +16,16 @@ public class controlMain implements ActionListener {
         //Instanciacion de la vista
         this.vb = new vBienvenida();
         this.vj = new vJugador();
+        //Escucha botones de la vista
+        this.vb.btnContinuar.addActionListener(this);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if(e.getSource() == this.vb.btnContinuar){
+            
+        }
     }
 
 }
