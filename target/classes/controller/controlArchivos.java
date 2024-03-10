@@ -100,7 +100,7 @@ public class controlArchivos {
                 nombrej4 = quitarEspacios(nombrej4);
 
                 System.out.println("Clave: "+clave+" |  # de Equipo: "+numE+" |  Nombre de equipo: "+nombreE+" |  Jugador #1: "+ nombrej1+" |  Jugador #1: "
-                            +nombrej1+" |  Jugador #2: "+nombrej2+" |  Jugador #3: "+nombrej3+" |  Jugador #4: "+nombrej4);
+                            +nombrej1+" |  Jugador #2: "+nombrej2+" |  Jugador #3: "+nombrej3+" |  Jugador #4: "+nombrej4+" | Resultado: "+resultado);
 
             }
         } catch (FileNotFoundException fnfe) {/* Archivo no encontrado */
