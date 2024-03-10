@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import javax.swing.JFileChooser;
-
 import model.Team;
 
 public class controlArchivos {
