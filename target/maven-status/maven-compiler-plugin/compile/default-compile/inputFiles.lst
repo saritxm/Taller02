@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\controller\controlArchivos.java
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\controller\Launcher.java
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\controller\controlMain.java
@@ -9,3 +10,16 @@ C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\view\vBienvenida
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\view\vJugador.java
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\controller\controlPlayers.java
 C:\Users\Sara\Documents\NetBeansProjects\Taller02\src\main\java\view\vJugador2.java
+=======
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\controller\Launcher.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\view\vJugador2.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\model\Result.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\view\vJugador.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\controller\controlPlayers.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\controller\controlArchivos.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\model\Player.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\model\Team.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\controller\controlMain.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\view\vBienvenida.java
+C:\Users\Carlos Riveros\Documents\Programación avanzada\Taller02\src\main\java\view\vPartida.java
+>>>>>>> 999c41d6926420f2dad2b36d95f837e076565df3

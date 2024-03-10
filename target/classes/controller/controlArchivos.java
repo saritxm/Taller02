@@ -29,11 +29,11 @@ public class controlArchivos {
 
     //Setter para los archivos pre y post carga
     public void setProp(File f) throws IOException {
-        this.prop.load(new FileInputStream(f));;
+        this.prop.load(new FileInputStream(f));
     }
 
     public void setArchivo(File f) throws IOException{
-        this.archivo = new RandomAccessFile(f,"rw");;
+        this.archivo = new RandomAccessFile(f,"rw");
     }
 
     /**

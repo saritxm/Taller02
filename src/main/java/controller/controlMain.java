@@ -41,7 +41,6 @@ public class controlMain implements ActionListener {
         
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
-        this.vp.btnSalirP.addActionListener(this);
         iniciar();
     }
     private void iniciar() {
@@ -51,15 +50,13 @@ public class controlMain implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vb.btnContinuar){
             vb.setVisible(false);
-            vj.setVisible(true);
-            
+            vj.setVisible(true);  
         }
          //Botones para salir
-         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2 || e.getSource() ==  this.vp.btnSalirP){
+         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2){
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
-            this.vp.dispose();
         }
         if(e.getSource() == this.vj.btnRegistrarJ){
             p1.setNombre(vj.cajaNombreJ1.getText());
@@ -94,6 +91,7 @@ public class controlMain implements ActionListener {
             players.add(p6);
             players.add(p7);
             players.add(p8);
+            cPlayers.randomPlayers(players);
         }
     }
 }
