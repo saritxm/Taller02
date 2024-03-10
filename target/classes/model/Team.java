@@ -60,5 +60,14 @@ public class Team {
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
+    public boolean scrollPlayers(Player pl){
+        boolean x = false;
+        for (Player player : players) {
+            if(player != pl){
+                x = true;
+            }
+        }
+        return x;
+    }
     
 }
