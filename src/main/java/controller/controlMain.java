@@ -2,6 +2,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import model.Player;
 import view.vBienvenida;
@@ -18,6 +19,7 @@ public class controlMain implements ActionListener {
     private vJugador2 vj2;
     private vPartida vp;
     private Player p1, p2,p3,p4,p5,p6,p7,p8;
+    private ArrayList<Player> players; 
     
     
 
@@ -30,7 +32,9 @@ public class controlMain implements ActionListener {
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
-
+        this.vj.btnRegistrarJ.addActionListener(this);
+        //Instanciacion del arraylist de los jugadores que se registran
+        this.players = new ArrayList<Player>();
         iniciar();
     }
     private void iniciar() {
@@ -73,6 +77,14 @@ public class controlMain implements ActionListener {
             p8.setNombre(vj.cajaNombreJ8.getText());
             p8.setEdad(Integer.parseInt(vj.cajaEdadJ8.getText()));
             p8.setCedula(vj.cajaCedulaJ8.getText());
+            players.add(p1);
+            players.add(p2);
+            players.add(p3);
+            players.add(p4);
+            players.add(p5);
+            players.add(p6);
+            players.add(p7);
+            players.add(p8);
         }
     }
 }
