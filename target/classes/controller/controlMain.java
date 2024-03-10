@@ -1,7 +1,9 @@
 package controller;
 
+import java.awt.color.CMMException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import model.Player;
@@ -23,7 +25,7 @@ public class controlMain implements ActionListener {
     
     
 
-    public controlMain() {
+    public controlMain() throws IOException {
         //Instanciacion de la vista
         this.vb = new vBienvenida();
         this.vj = new vJugador();
@@ -33,6 +35,8 @@ public class controlMain implements ActionListener {
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
+        //Controladores
+        cArchivos = new controlArchivos();
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         iniciar();
