@@ -17,7 +17,6 @@ public class Team {
     private int TeamNumber;
     private String name;
     
-    
     public Team(String name, String deparment, int num){
         this.players =  new ArrayList<>();
         this.deparment = deparment;
@@ -49,8 +48,17 @@ public class Team {
     public void setName(String name){
         this.name = name;
     }
+
     public String getName(){
         return name;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return this.players;
+    }
+
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
     }
     
 }
