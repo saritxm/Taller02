@@ -1,46 +1,53 @@
 package controller;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.io.File;
 
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 import model.Player;
-import model.Team;
 
 public class controlPlayers {
     private controlArchivos cArchivos;
     private File f;
+    private JFileChooser fc;
 
     public controlPlayers() throws IOException{
-        this.cArchivos = new controlArchivos();
-        JFileChooser fc = new JFileChooser(System.getProperty("user.dir"));
+        cArchivos = new controlArchivos();
+        fc= new JFileChooser(System.getProperty("user.dir"));
         fc.showOpenDialog(fc);
-        f = fc.getSelectedFile();
-        this.cArchivos.setProp(f);
-        this.cArchivos.obtenerEquipos();
+        f=fc.getSelectedFile();
+        iniciar();
     }
+
+    public void iniciar(){
+        try{
+        cArchivos.setProp(f);
+        }
+        catch(IOException e){
+            JOptionPane.showMessageDialog(fc, e, null, 0);
+        }
+    }
+
+    public void randomTeams(){
+
+        Random rand = new Random();
+        int numRand = rand.nextInt(cArchivos.getEquipos().size());
+    }
+
 
     public void randomPlayers(ArrayList<Player> players){
         Random rand = new Random();
-        System.out.println((cArchivos.getEquipos().size()));
         int numRand = rand.nextInt(cArchivos.getEquipos().size());
          for(Player pl:players){
             for(int i=0; i<cArchivos.getEquipos().size(); i++){
                 if(cArchivos.getEquipos().get(i).scrollPlayers(pl)){
                     cArchivos.getEquipos().get(numRand).getPlayers().add(pl);
                 }
-            }
-        }
-
-    }
-
-    public void prueba(){
-        for(Team i : cArchivos.getEquipos()){
-            for(Player j : i.getPlayers()){
-                System.out.println(j.getNombre());
             }
         }
     }
