@@ -2,7 +2,6 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import model.Player;
@@ -24,54 +23,36 @@ public class controlMain implements ActionListener {
     
     
 
-    public controlMain() throws IOException {
+    public controlMain() {
         //Instanciacion de la vista
         this.vb = new vBienvenida();
         this.vj = new vJugador();
         this.vj2 = new vJugador2();
         this.vp = new vPartida();
-        //Instanciacion de otros controladores
-        this.cPlayers = new controlPlayers();
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
-        this.vp.btnSalirP.addActionListener(this);
         iniciar();
     }
     private void iniciar() {
         vb.setVisible(true);
     }
-
-    private void crearJugadores(){
-        this.p1 = new Player();
-        this.p2 = new Player();
-        this.p3 = new Player();
-        this.p4 = new Player();
-        this.p5 = new Player();
-        this.p6 = new Player();
-        this.p7 = new Player();
-        this.p8 = new Player();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vb.btnContinuar){
             vb.setVisible(false);
-            vj.setVisible(true);
-            
+            vj.setVisible(true);  
         }
          //Botones para salir
-         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2 || e.getSource() ==  this.vp.btnSalirP){
+         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2){
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
-            this.vp.dispose();
         }
         if(e.getSource() == this.vj.btnRegistrarJ){
-            crearJugadores();
             p1.setNombre(vj.cajaNombreJ1.getText());
             p1.setEdad(Integer.parseInt(vj.cajaEdadJ1.getText()));
             p1.setCedula(vj.cajaCedulaJ1.getText());
@@ -105,7 +86,6 @@ public class controlMain implements ActionListener {
             players.add(p7);
             players.add(p8);
             cPlayers.randomPlayers(players);
-            cPlayers.prueba();
         }
     }
 }
