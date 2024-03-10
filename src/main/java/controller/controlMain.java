@@ -29,6 +29,7 @@ public class controlMain implements ActionListener {
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnSalirvJ.addActionListener(this);
         this.vj2.btnSalirvJv2.addActionListener(this);
+        this.vp.btnSalirP.addActionListener(this);
 
         iniciar();
     }
@@ -39,13 +40,15 @@ public class controlMain implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vb.btnContinuar){
             vb.setVisible(false);
-            vj.setVisible(true);  
+            vj.setVisible(true);
+            
         }
          //Botones para salir
-         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2){
+         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2 || e.getSource() ==  this.vp.btnSalirP){
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
+            this.vp.dispose();
         }
     }
 
