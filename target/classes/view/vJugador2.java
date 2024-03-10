@@ -232,6 +232,14 @@ public class vJugador2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaCedulaJ5ActionPerformed
 
+    private void cajaCedulaJ3v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaCedulaJ3ActionPerformed
+    
+    private void cajaEdadJ8v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedulaJ5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaEdadJ8ActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnRegistrarJv2;
