@@ -14,6 +14,7 @@ public class vJugador extends javax.swing.JFrame {
      * Creates new form vJugador
      */
     public vJugador() {
+        setTitle("Registro de jugadores");
         initComponents();
     }
 
