@@ -26,22 +26,49 @@ public class vPartida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btnSalirP = new javax.swing.JButton();
+        btnLanzartejo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Perpetua", 1, 34)); // NOI18N
+        jLabel2.setText("CAMPEONATO NACIONAL DE TEJO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
+
+        btnSalirP.setBackground(new java.awt.Color(255, 255, 153));
+        btnSalirP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSalirP.setText("SALIR");
+        jPanel1.add(btnSalirP, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 100, 40));
+
+        btnLanzartejo.setBackground(new java.awt.Color(255, 153, 153));
+        btnLanzartejo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLanzartejo.setText("LANZAR TEJO");
+        btnLanzartejo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLanzartejoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 140, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanapartida.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnLanzartejo;
+    public javax.swing.JButton btnSalirP;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
