@@ -18,8 +18,19 @@ public class controlArchivos {
     public void obtenerEquipos(String ruta) throws IOException{
         try {
             prop.load(new FileInputStream("data/teams.properties"));
-            ArrayList<String> listaEq;
-            
+            ArrayList<String> listaEq = new ArrayList<>();
+            for(String key : prop.stringPropertyNames()){
+                if(key.startsWith("team")){
+                    listaEq.add(key);
+                }
+            }
+            for(String i : listaEq){
+                String nombre = prop.getProperty(i+".name");
+                String dep = prop.getProperty(i+".name");
+                int num = Integer.parseInt(prop.getProperty(i+".num"));
+                equipos.add(new Team());
+            }
+
         } catch (IOException e) {
             e.getStackTrace();        
         }
