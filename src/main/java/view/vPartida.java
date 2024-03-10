@@ -14,6 +14,7 @@ public class vPartida extends javax.swing.JFrame {
      * Creates new form vPartida
      */
     public vPartida() {
+        setTitle("Partida de tejo");
         initComponents();
     }
 
