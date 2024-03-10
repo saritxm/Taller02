@@ -40,7 +40,7 @@ public class controlMain implements ActionListener {
             vj.setVisible(true);  
         }
          //Botones para salir
-         else if (e.getSource() == this.v.btnSalir1|| e.getSource() == this.vista.btnSalir|| e.getSource() == this.vb.btnSalirvb){
+         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2){
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();

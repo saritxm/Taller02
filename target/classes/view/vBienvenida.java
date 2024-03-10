@@ -94,7 +94,7 @@ public class vBienvenida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel TextovBienvenida;
     public javax.swing.JButton btnContinuar;
-    private javax.swing.JButton btnSalir1;
+    public javax.swing.JButton btnSalir1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel textoTitulo;
