@@ -15,11 +15,16 @@ public class Team {
     private ArrayList<Player> players;
     private String deparment;
     private int TeamNumber;
+    private String name;
     
-    public Team(Player p1, Player p2, Player p3, Player p4){
+    
+    public Team(String name, String deparment, int num){
         this.players =  new ArrayList<>();
-        this.deparment = "";
-        this.TeamNumber = 0;
+        this.deparment = deparment;
+        this.TeamNumber = num;
+        this.name = name;
+    }
+    public void Iniciar(Player p1, Player p2, Player p3, Player p4){
         players.add(p1);
         players.add(p2);
         players.add(p3);
@@ -40,6 +45,12 @@ public class Team {
 
     public void setTeamNumber(int TeamNumber) {
         this.TeamNumber = TeamNumber;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
     }
     
 }
