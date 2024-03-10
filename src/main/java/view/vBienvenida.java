@@ -14,6 +14,7 @@ public class vBienvenida extends javax.swing.JFrame {
      * Creates new form vBienvenida
      */
     public vBienvenida() {
+        setTitle("Campeonato Nacional de Tejo");
         initComponents();
     }
 
@@ -26,23 +27,61 @@ public class vBienvenida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        textoTitulo = new javax.swing.JLabel();
+        TextovBienvenida = new javax.swing.JLabel();
+        btnContinuar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        textoTitulo.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 26)); // NOI18N
+        textoTitulo.setText("Campeonato Nacional de Tejo");
+        jPanel1.add(textoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 330, 50));
+
+        TextovBienvenida.setFont(new java.awt.Font("Microsoft Uighur", 0, 28)); // NOI18N
+        TextovBienvenida.setForeground(new java.awt.Color(255, 255, 255));
+        TextovBienvenida.setText("¡Demuestra tu habilidad en el tejo y conviértete en el campeón! ");
+        jPanel1.add(TextovBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        btnContinuar.setBackground(new java.awt.Color(255, 255, 102));
+        btnContinuar.setText("CONTINUAR");
+        btnContinuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinuarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 100, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanabienv.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 340));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnContinuarActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel TextovBienvenida;
+    public javax.swing.JButton btnContinuar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel textoTitulo;
     // End of variables declaration//GEN-END:variables
 }
