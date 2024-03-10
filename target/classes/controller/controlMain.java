@@ -26,6 +26,7 @@ public class controlMain implements ActionListener {
         this.vp = new vPartida();
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
+        this.vb.btnSalir1.addActionListener(this);
 
         iniciar();
     }
@@ -37,6 +38,12 @@ public class controlMain implements ActionListener {
         if(e.getSource() == this.vb.btnContinuar){
             vb.setVisible(false);
             vj.setVisible(true);  
+        }
+         //Botones para salir
+         else if (e.getSource() == this.v.btnSalir1|| e.getSource() == this.vista.btnSalir|| e.getSource() == this.vb.btnSalirvb){
+            this.vb.dispose();
+            this.vj.dispose();
+            this.vj2.dispose();
         }
     }
 
