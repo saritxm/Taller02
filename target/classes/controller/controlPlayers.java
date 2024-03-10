@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.io.File;
 
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -34,7 +33,6 @@ public class controlPlayers {
     }
 
     public void randomTeams(){
-
         Random rand = new Random();
         int numRand = rand.nextInt(cArchivos.getEquipos().size());
     }
