@@ -17,12 +17,5 @@
             "mainClass": "controller.Launcher",
             "projectName": "Taller02"
         },
-        {
-            "type": "java",
-            "name": "vPartida",
-            "request": "launch",
-            "mainClass": "view.vPartida",
-            "projectName": "Taller02"
-        }
     ]
 }
