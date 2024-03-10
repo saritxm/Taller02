@@ -2,6 +2,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import model.Player;
 import view.vBienvenida;
 import view.vJugador;
 import view.vJugador2;
@@ -15,6 +17,7 @@ public class controlMain implements ActionListener {
     private vJugador vj;
     private vJugador2 vj2;
     private vPartida vp;
+    private Player p1, p2,p3,p4,p5,p6,p7,p8;
     
     
 
@@ -27,8 +30,6 @@ public class controlMain implements ActionListener {
         //Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
-        this.vj.btnSalirvJ.addActionListener(this);
-        this.vj2.btnSalirvJv2.addActionListener(this);
 
         iniciar();
     }
@@ -47,6 +48,31 @@ public class controlMain implements ActionListener {
             this.vj.dispose();
             this.vj2.dispose();
         }
+        if(e.getSource() == this.vj.btnRegistrarJ){
+            p1.setNombre(vj.cajaNombreJ1.getText());
+            p1.setEdad(Integer.parseInt(vj.cajaEdadJ1.getText()));
+            p1.setCedula(vj.cajaCedulaJ1.getText());
+            p2.setNombre(vj.cajaNombreJ2.getText());
+            p2.setEdad(Integer.parseInt(vj.cajaEdadJ2.getText()));
+            p2.setCedula(vj.cajaCedulaJ2.getText());
+            p3.setNombre(vj.cajaNombreJ3.getText());
+            p3.setEdad(Integer.parseInt(vj.cajaEdadJ3.getText()));
+            p3.setCedula(vj.cajaCedulaJ3.getText());
+            p4.setNombre(vj.cajaNombreJ4.getText());
+            p4.setEdad(Integer.parseInt(vj.cajaEdadJ4.getText()));
+            p4.setCedula(vj.cajaCedulaJ4.getText());
+            p5.setNombre(vj.cajaNombreJ5.getText());
+            p5.setEdad(Integer.parseInt(vj.cajaEdadJ5.getText()));
+            p5.setCedula(vj.cajaCedulaJ5.getText());
+            p6.setNombre(vj.cajaNombreJ6.getText());
+            p6.setEdad(Integer.parseInt(vj.cajaEdadJ6.getText()));
+            p6.setCedula(vj.cajaCedulaJ6.getText());
+            p7.setNombre(vj.cajaNombreJ7.getText());
+            p7.setEdad(Integer.parseInt(vj.cajaEdadJ7.getText()));
+            p7.setCedula(vj.cajaCedulaJ7.getText());
+            p8.setNombre(vj.cajaNombreJ8.getText());
+            p8.setEdad(Integer.parseInt(vj.cajaEdadJ8.getText()));
+            p8.setCedula(vj.cajaCedulaJ8.getText());
+        }
     }
-
 }
