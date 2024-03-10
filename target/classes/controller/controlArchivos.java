@@ -18,6 +18,8 @@ public class controlArchivos {
     public void obtenerEquipos(String ruta) throws IOException{
         try {
             prop.load(new FileInputStream("data/teams.properties"));
+            ArrayList<String> listaEq;
+            
         } catch (IOException e) {
             e.getStackTrace();        
         }
