@@ -5,6 +5,8 @@ public class Player {
     private int edad;
     private String cedula;
 
+    public Player(){}
+
     public String getNombre() {
         return this.nombre;
     }
