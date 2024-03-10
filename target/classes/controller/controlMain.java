@@ -96,6 +96,6 @@ public class controlMain implements ActionListener {
             players.add(p7);
             players.add(p8);
             cPlayers.randomPlayers(players);
-        }
+           }
     }
 }
