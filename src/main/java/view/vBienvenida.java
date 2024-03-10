@@ -53,7 +53,7 @@ public class vBienvenida extends javax.swing.JFrame {
                 btnContinuarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 100, 40));
+        jPanel1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 150, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanabienv.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 340));

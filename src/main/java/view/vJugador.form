@@ -465,6 +465,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnRegistrarJ">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="REGISTRAR JUGADORES"/>
           </Properties>
           <AuxValues>
@@ -472,12 +475,15 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="240" y="300" width="160" height="40"/>
+              <AbsoluteConstraints x="220" y="300" width="200" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="btnSalirvJ">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="SALIR"/>
           </Properties>
           <AuxValues>

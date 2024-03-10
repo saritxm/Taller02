@@ -181,9 +181,11 @@ public class vJugador extends javax.swing.JFrame {
         jPanel1.add(cajaCedulaJ7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 80, 30));
         jPanel1.add(cajaCedulaJ8, new org.netbeans.lib.awtextra.AbsoluteConstraints(861, 240, 80, 30));
 
+        btnRegistrarJ.setBackground(new java.awt.Color(255, 204, 204));
         btnRegistrarJ.setText("REGISTRAR JUGADORES");
-        jPanel1.add(btnRegistrarJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 160, 40));
+        jPanel1.add(btnRegistrarJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 200, 40));
 
+        btnSalirvJ.setBackground(new java.awt.Color(255, 153, 153));
         btnSalirvJ.setText("SALIR");
         jPanel1.add(btnSalirvJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 90, 30));
 
