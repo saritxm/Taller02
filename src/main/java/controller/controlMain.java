@@ -119,14 +119,21 @@ public class controlMain implements ActionListener {
             cPlayers.randomPlayers(players);
         }
         //Lanzar tejo(jugada)
-        else if(e.getSource() == this.vp.btnLanzartejo){
-                Team equipoActual = cPlayers.getEquipo1();
-                for (int i = 0; i < equipoActual.getPlayers().size(); i++) {
-                    Player jugadorActual = equipoActual.getPlayers().get(i);
-                    int resultadoLanzamiento = jugadorActual.lanzarTejo();
-                }
+        if(e.getSource() == this.vp.btnLanzartejo){
             while (x<4) {
-                cPlayers.getEquipo1().getPlayers().get(x);          
+                Team t = new Team();
+                if (y==0) {
+                    t=cPlayers.getEquipo1();
+                }
+                else if(y==1){
+                    t= cPlayers.getEquipo2();
+                }
+                vp.mostrarMensaje("El jugador "+x+ " obtuvo como resultado: "+cPlayers.getEquipo1().getPlayers().get(x));
+                x=x+1;
+                
+                if(x==4){
+                    x=0;
+                }               
             }
         }
     }

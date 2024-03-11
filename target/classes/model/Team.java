@@ -15,7 +15,14 @@ public class Team {
     private String deparment;
     private int TeamNumber;
     private String name;
-    
+
+    public Team(){
+        this.players = new ArrayList<>();
+        this.deparment = "";
+        this.TeamNumber = 0;
+        this.name = "";
+    }
+
     public Team(String name, String deparment, int num){
         this.players =  new ArrayList<>();
         this.deparment = deparment;
@@ -61,12 +68,4 @@ public class Team {
     }
     public boolean scrollPlayers(Player pl){
         boolean x = false;
-        for (Player player : players) {
-            if(player != pl){
-                x = true;
-            }
-        }
-        return x;
-    }
-    
-}
+       

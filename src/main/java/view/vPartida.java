@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sara
@@ -66,4 +68,7 @@ public class vPartida extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+    public void mostrarMensaje(String m){
+        JOptionPane.showMessageDialog(null, m, "Info", ABORT);
+    }
 }
