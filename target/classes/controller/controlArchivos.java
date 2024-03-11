@@ -11,7 +11,7 @@ import java.util.Properties;
 import model.Player;
 import model.Team;
 import model.Result;
-//Comentario
+
 /**
  * Esta clase se encarga de toda la persistencia del programa
  */
