@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import model.Player;
+import model.Team;
 import view.vBienvenida;
 import view.vJugador;
 import view.vJugador2;
@@ -111,11 +112,21 @@ public class controlMain implements ActionListener {
             this.vj.dispose();
             this.vj2.dispose();
         }
-        if (e.getSource() == this.vj.btnRegistrarJ) {
+        else if (e.getSource() == this.vj.btnRegistrarJ) {
             crearJugadores();
             asignarDatosplayers();
             cPlayers.obtenerEquipos();
             cPlayers.randomPlayers(players);
+        }
+        else if(e.getSource() == this.vp.btnLanzartejo){
+                Team equipoActual = cPlayers.getEquipo1();
+                for (int i = 0; i < equipoActual.getPlayers().size(); i++) {
+                    Player jugadorActual = equipoActual.getPlayers().get(i);
+                    int resultadoLanzamiento = jugadorActual.lanzarTejo();
+
+            while (x<4) {
+                cPlayers.getEquipo1().getPlayers().get(x)              
+            }
         }
     }
 }
