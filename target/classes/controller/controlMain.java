@@ -118,6 +118,7 @@ public class controlMain implements ActionListener {
             cPlayers.obtenerEquipos();
             cPlayers.randomPlayers(players);
         }
+        //Lanzar tejo(jugada)
         else if(e.getSource() == this.vp.btnLanzartejo){
                 Team equipoActual = cPlayers.getEquipo1();
                 for (int i = 0; i < equipoActual.getPlayers().size(); i++) {
