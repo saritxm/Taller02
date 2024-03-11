@@ -22,7 +22,11 @@ public class controlMain implements ActionListener {
     private vPartida vp;
     private Player p1, p2, p3, p4, p5, p6, p7, p8;
     private ArrayList<Player> players;
-    private int x = 0;
+
+    private int x = 0; // Turnos jugadores
+    private int turnos = 1; // Turnos equpos
+    private int puntaje1 = 0;
+    private int puntaje2 = 0;
 
     public controlMain() throws IOException {
         // Instanciacion de la vista
@@ -98,7 +102,30 @@ public class controlMain implements ActionListener {
         players.add(p8);
     }
 
-    //Actions listeners
+    private void resultado(Team x) {
+        String jugadoresInfo = "Equpo ganador: " + x.toString() + "Jugadores... \n";
+        for (Player i : x.getPlayers()) {
+            jugadoresInfo += i.toString() + "\n";
+        }
+        vp.mostrarResultado(jugadoresInfo);
+
+        vp.setVisible(false);
+        vp.dispose();
+    }
+
+    private void desabilitar(int x){
+        if (turnos % 2 == 0) {
+            //Desabilitar panel a
+        } else {
+            //Desabilitar pabel b
+        }
+    }
+
+    private void asignarNombres(){
+        
+    }
+
+    // Actions listeners
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vb.btnContinuar) {
@@ -111,30 +138,39 @@ public class controlMain implements ActionListener {
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
-        }
-        else if (e.getSource() == this.vj.btnRegistrarJ) {
+        } else if (e.getSource() == this.vj.btnRegistrarJ) {
             crearJugadores();
             asignarDatosplayers();
             cPlayers.obtenerEquipos();
             cPlayers.randomPlayers(players);
+            vp.setVisible(true);
+            vj.setVisible(false);
+            desabilitar(turnos);
         }
-        //Lanzar tejo(jugada)
-        if(e.getSource() == this.vp.btnLanzartejo){
-            while (x<4) {
-                Team t = new Team();
-                if (y==0) {
-                    t=cPlayers.getEquipo1();
+        // Lanzar tejo(jugada)
+        if (e.getSource() == this.vp.btnLanzartejo) {
+            turnos++;
+            desabilitar(turnos);
+            if (turnos % 2 == 0) {
+                if (x == 4) x = 0;
+                int aux = cPlayers.getEquipo1().getPlayers().get(x).lanzarTejo();
+                puntaje1 += aux;
+                vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre(), aux);
+
+                if (puntaje1 >= 27) {
+                    resultado(cPlayers.getEquipo1());
                 }
-                else if(y==1){
-                    t= cPlayers.getEquipo2();
+            } else {
+                int aux2 = cPlayers.getEquipo2().getPlayers().get(x).lanzarTejo();
+                puntaje2 += aux2;
+                vp.mostrarMensaje(cPlayers.getEquipo2().getPlayers().get(x).getNombre(), aux2);
+
+                x++;
+                if (puntaje2 >= 27) {
+                    resultado(cPlayers.getEquipo2());
                 }
-                vp.mostrarMensaje("El jugador "+x+ " obtuvo como resultado: "+cPlayers.getEquipo1().getPlayers().get(x));
-                x=x+1;
-                
-                if(x==4){
-                    x=0;
-                }               
             }
         }
+
     }
 }

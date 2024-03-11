@@ -18,6 +18,7 @@ public class vPartida extends javax.swing.JFrame {
     public vPartida() {
         setTitle("Partida de tejo");
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -32,6 +33,8 @@ public class vPartida extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnSalirP = new javax.swing.JButton();
         btnLanzartejo = new javax.swing.JButton();
+        panel2 = new java.awt.Panel();
+        panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,6 +56,13 @@ public class vPartida extends javax.swing.JFrame {
         btnLanzartejo.setText("LANZAR TEJO");
         jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 140, 40));
 
+        panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 390, 300));
+
+        panel1.setBackground(new java.awt.Color(0, 0, 0, 0));
+        panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 390, 300));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanapartida.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
 
@@ -67,8 +77,13 @@ public class vPartida extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private java.awt.Panel panel1;
+    private java.awt.Panel panel2;
     // End of variables declaration//GEN-END:variables
-    public void mostrarMensaje(String m){
-        JOptionPane.showMessageDialog(null, m, "Info", ABORT);
+    public void mostrarMensaje(String nJugador, int puntaje){
+        JOptionPane.showMessageDialog(null, "El jugador "+nJugador+ " obtuvo como resultado: "+puntaje, "LANZAMIENTO", JOptionPane.INFORMATION_MESSAGE);
+    }
+    public void mostrarResultado(String jugadores){
+        JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
     }
 }

@@ -75,5 +75,11 @@ public class Team {
         }
         return x;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + name +", Numero de Equipo: "+ TeamNumber + ", Departamento: " + deparment;
+    }
+    
     
 }

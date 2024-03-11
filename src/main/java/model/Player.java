@@ -54,5 +54,11 @@ public class Player {
         }
          return ans;
     }
+
+    @Override
+    public String toString() {
+        return  "Nombre=" + nombre + ", edad=" + edad + ", cedula=" + cedula ;
+    }
+    
     
 }
