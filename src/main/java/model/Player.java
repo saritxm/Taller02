@@ -35,7 +35,7 @@ public class Player {
 
     public int lanzarTejo(){
         Random rand = new Random();
-        int result = rand.nextInt(3);
+        int result = rand.nextInt(5);
         int ans = 0;
         if(result == 0){
             ans = 1;
@@ -48,6 +48,9 @@ public class Player {
         }
         else if(result == 3){
             ans = 9;
+        }
+        else if(result == 4){
+            ans = 0;
         }
          return ans;
     }
