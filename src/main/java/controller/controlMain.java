@@ -125,7 +125,7 @@ public class controlMain implements ActionListener {
                     int resultadoLanzamiento = jugadorActual.lanzarTejo();
                 }
             while (x<4) {
-                cPlayers.getEquipo1().getPlayers().get(x)              
+                cPlayers.getEquipo1().getPlayers().get(x);          
             }
         }
     }
