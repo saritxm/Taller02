@@ -76,10 +76,4 @@ public class controlPlayers {
     public Team getEquipo2() {
         return this.equipo2;
     }
-
-    public int play(Team t){
-        for(Player p: t.getPlayers()){
-            return p.lanzarTejo();
-        }
-    }
 }
