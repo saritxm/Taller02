@@ -20,7 +20,8 @@ public class controlMain implements ActionListener {
     private vJugador2 vj2;
     private vPartida vp;
     private Player p1, p2,p3,p4,p5,p6,p7,p8;
-    private ArrayList<Player> players; 
+    private ArrayList<Player> players;
+    private int x = 0;
     
     
 
@@ -34,6 +35,7 @@ public class controlMain implements ActionListener {
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
+        this.vp.btnLanzartejo.addActionListener(this);
         //Controladores
         cArchivos = new controlArchivos();
         //Instanciacion del arraylist de los jugadores que se registran
@@ -89,6 +91,11 @@ public class controlMain implements ActionListener {
             players.add(p7);
             players.add(p8);
             cPlayers.randomPlayers(players);
+        }
+        if(e.getSource() == this.vp.btnLanzartejo){
+            while (x<4) {
+                cPlayers.getEquipo1().getPlayers().get(x)               
+            }
         }
     }
 }
