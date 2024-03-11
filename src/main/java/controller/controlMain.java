@@ -19,39 +19,38 @@ public class controlMain implements ActionListener {
     private vJugador vj;
     private vJugador2 vj2;
     private vPartida vp;
-    private Player p1, p2,p3,p4,p5,p6,p7,p8;
+    private Player p1, p2, p3, p4, p5, p6, p7, p8;
     private ArrayList<Player> players;
     private int x = 0;
-    
-    
 
     public controlMain() throws IOException {
-        //Instanciacion de la vista
+        // Instanciacion de la vista
         this.vb = new vBienvenida();
         this.vj = new vJugador();
         this.vj2 = new vJugador2();
         this.vp = new vPartida();
-        //Escucha botones de la vista
+        // Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
         this.vj.btnRegistrarJ.addActionListener(this);
-this.vj.btnSalirvJ.addActionListener(this);
+        this.vj.btnSalirvJ.addActionListener(this);
         this.vj2.btnSalirvJv2.addActionListener(this);
         this.vj2.btnRegistrarJv2.addActionListener(this);
         this.vp.btnSalirP.addActionListener(this);
         this.vp.btnLanzartejo.addActionListener(this);
-        //Controladores
+        // Controladores
         this.cArchivos = new controlArchivos();
-this.cPlayers  = new controlPlayers();
-        //Instanciacion del arraylist de los jugadores que se registran
+        this.cPlayers = new controlPlayers();
+        // Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         iniciar();
     }
+
     private void iniciar() {
         vb.setVisible(true);
     }
-    
-    private void crearJugadores(){
+
+    private void crearJugadores() {
         this.p1 = new Player();
         this.p2 = new Player();
         this.p3 = new Player();
@@ -61,7 +60,8 @@ this.cPlayers  = new controlPlayers();
         this.p7 = new Player();
         this.p8 = new Player();
     }
-    private void asignarDatosplayers(){
+
+    private void asignarDatosplayers() {
         players.clear();
         p1.setNombre(vj.cajaNombreJ1.getText());
         p1.setEdad(Integer.parseInt(vj.cajaEdadJ1.getText()));
@@ -99,21 +99,22 @@ this.cPlayers  = new controlPlayers();
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == this.vb.btnContinuar){
+        if (e.getSource() == this.vb.btnContinuar) {
             vb.setVisible(false);
-            vj.setVisible(true);  
+            vj.setVisible(true);
         }
-        //Botones para salir
-         else if (e.getSource() == this.vb.btnSalir1|| e.getSource() == this.vj.btnSalirvJ|| e.getSource() == this.vj2.btnSalirvJv2){
+        // Botones para salir
+        else if (e.getSource() == this.vb.btnSalir1 || e.getSource() == this.vj.btnSalirvJ
+                || e.getSource() == this.vj2.btnSalirvJv2) {
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
         }
-        if(e.getSource() == this.vj.btnRegistrarJ){
+        if (e.getSource() == this.vj.btnRegistrarJ) {
             crearJugadores();
             asignarDatosplayers();
             cPlayers.obtenerEquipos();
-            cPlayers.randomPlayers(players);     
+            cPlayers.randomPlayers(players);
         }
     }
 }
