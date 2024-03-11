@@ -1,6 +1,5 @@
 package controller;
 
-import java.awt.color.CMMException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -41,7 +40,8 @@ public class controlMain implements ActionListener {
         this.vp.btnSalirP.addActionListener(this);
         this.vp.btnLanzartejo.addActionListener(this);
         //Controladores
-        cArchivos = new controlArchivos();
+        this.cArchivos = new controlArchivos();
+        this.cPlayers  = new controlPlayers();
         //Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         iniciar();
@@ -61,6 +61,7 @@ public class controlMain implements ActionListener {
         this.p8 = new Player();
     }
     private void asignarDatosplayers(){
+        players.clear();
         p1.setNombre(vj.cajaNombreJ1.getText());
         p1.setEdad(Integer.parseInt(vj.cajaEdadJ1.getText()));
         p1.setCedula(vj.cajaCedulaJ1.getText());
@@ -110,7 +111,8 @@ public class controlMain implements ActionListener {
         if(e.getSource() == this.vj.btnRegistrarJ){
             crearJugadores();
             asignarDatosplayers();
-            cPlayers.randomPlayers(players);
+            cPlayers.obtenerEquipos();
+            cPlayers.randomPlayers(players);     
            }
     }
 }

@@ -23,7 +23,7 @@ public class Team {
         this.TeamNumber = num;
         this.name = name;
     }
-    public void Iniciar(Player p1, Player p2, Player p3, Player p4){
+    public void iniciar(Player p1, Player p2, Player p3, Player p4){
         players.add(p1);
         players.add(p2);
         players.add(p3);
