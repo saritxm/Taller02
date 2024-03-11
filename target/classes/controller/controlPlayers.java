@@ -58,18 +58,4 @@ public class controlPlayers {
     public Team getEquipo2() {
         return this.equipo2;
     }
-
-    public void prueba(){
-        System.out.println(equipo1.getName());
-        System.out.println(equipo1.getPlayers().get(0).getNombre());
-        System.out.println(equipo1.getPlayers().get(1).getNombre());
-        System.out.println(equipo1.getPlayers().get(2).getNombre());
-        System.out.println(equipo1.getPlayers().get(3).getNombre());
-        System.out.println(equipo2.getName());
-        System.out.println(equipo2.getPlayers().get(0).getNombre());
-        System.out.println(equipo2.getPlayers().get(1).getNombre());
-        System.out.println(equipo2.getPlayers().get(2).getNombre());
-        System.out.println(equipo2.getPlayers().get(3).getNombre());
-    
-    }
 }
