@@ -123,7 +123,7 @@ public class controlMain implements ActionListener {
                 for (int i = 0; i < equipoActual.getPlayers().size(); i++) {
                     Player jugadorActual = equipoActual.getPlayers().get(i);
                     int resultadoLanzamiento = jugadorActual.lanzarTejo();
-
+                }
             while (x<4) {
                 cPlayers.getEquipo1().getPlayers().get(x)              
             }
