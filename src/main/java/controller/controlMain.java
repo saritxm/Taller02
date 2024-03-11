@@ -97,6 +97,7 @@ public class controlMain implements ActionListener {
         players.add(p8);
     }
 
+    //Actions listeners
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.vb.btnContinuar) {
