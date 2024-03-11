@@ -132,3 +132,9 @@ public class controlMain implements ActionListener {
                 x=x+1;
                 
                 if(x==4){
+                    x=0;
+                }               
+            }
+        }
+    }
+}

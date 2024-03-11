@@ -68,4 +68,12 @@ public class Team {
     }
     public boolean scrollPlayers(Player pl){
         boolean x = false;
-       
+        for (Player player : players) {
+            if(player != pl){
+                x = true;
+            }
+        }
+        return x;
+    }
+    
+}
