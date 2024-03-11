@@ -34,7 +34,17 @@ public class vPartida extends javax.swing.JFrame {
         btnSalirP = new javax.swing.JButton();
         btnLanzartejo = new javax.swing.JButton();
         panel2 = new java.awt.Panel();
+        jLabel1B = new javax.swing.JLabel();
+        jLabel2B = new javax.swing.JLabel();
+        jLabel3B = new javax.swing.JLabel();
+        jLabel4B = new javax.swing.JLabel();
+        jLabelFondoB = new javax.swing.JLabel();
         panel1 = new java.awt.Panel();
+        jLabel1A = new javax.swing.JLabel();
+        jLabel2A = new javax.swing.JLabel();
+        jLabel3A = new javax.swing.JLabel();
+        jLabel4A = new javax.swing.JLabel();
+        jLabelFondoA = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,11 +67,44 @@ public class vPartida extends javax.swing.JFrame {
         jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 140, 40));
 
         panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 390, 300));
+
+        jLabel1B.setText("jLabel3");
+        panel2.add(jLabel1B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 240, -1));
+
+        jLabel2B.setText("jLabel3");
+        panel2.add(jLabel2B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 220, -1));
+
+        jLabel3B.setText("jLabel3");
+        panel2.add(jLabel3B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 200, -1));
+
+        jLabel4B.setText("jLabel3");
+        panel2.add(jLabel4B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 200, -1));
+
+        jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/panelB.png"))); // NOI18N
+        panel2.add(jLabelFondoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 380, 300));
+
+        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 370, 290));
 
         panel1.setBackground(new java.awt.Color(0, 0, 0, 0));
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 390, 300));
+
+        jLabel1A.setBackground(new java.awt.Color(204, 255, 255));
+        jLabel1A.setText("jLabel5");
+        panel1.add(jLabel1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 190, 20));
+
+        jLabel2A.setText("jLabel5");
+        panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, -1));
+
+        jLabel3A.setText("jLabel5");
+        panel1.add(jLabel3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 180, -1));
+
+        jLabel4A.setText("jLabel3");
+        panel1.add(jLabel4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, -1));
+
+        jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/panelA.png"))); // NOI18N
+        panel1.add(jLabelFondoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 380, 320));
+
+        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 290));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanapartida.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
@@ -75,7 +118,17 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JButton btnLanzartejo;
     public javax.swing.JButton btnSalirP;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel1A;
+    private javax.swing.JLabel jLabel1B;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel2A;
+    private javax.swing.JLabel jLabel2B;
+    private javax.swing.JLabel jLabel3A;
+    private javax.swing.JLabel jLabel3B;
+    private javax.swing.JLabel jLabel4A;
+    private javax.swing.JLabel jLabel4B;
+    private javax.swing.JLabel jLabelFondoA;
+    private javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;

@@ -121,8 +121,10 @@ public class controlMain implements ActionListener {
         }
     }
 
+    //Poner los nombre de los jugadores 
     private void asignarNombres(){
-        
+        cPlayers.getEquipo1().getPlayers();
+        cPlayers.getEquipo2().getPlayers();
     }
 
     // Actions listeners
