@@ -151,17 +151,26 @@ public class vPartida extends javax.swing.JFrame {
 
        //comentario random
 
-        BufferedImage nueva = new BufferedImage(imagenO.getIconWidth(),imagenO.getIconHeight(),BufferedImage.TYPE_INT_ARGB);
-        Graphics2D img2d = nueva.createGraphics();
-        AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);
-        imagenO.paintIcon(null,img2d,0,0);
-        img2d.dispose();
-        BufferedImage imagenModificada = new BufferedImage(nueva.getWidth(), nueva.getHeight(), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D img2dm = imagenModificada.createGraphics();
-        img2d.setComposite(alphaComposite);
-        img2dm.drawImage(nueva, 0, 0, null);
-        img2d.dispose();
-        return new ImageIcon(nueva);
+       int ancho = imagenO.getIconWidth();
+       int alto = imagenO.getIconHeight();
+   
+       BufferedImage nuevaImagen = new BufferedImage(ancho, alto, BufferedImage.TYPE_INT_ARGB);
+   
+       // Obtener una instancia de Graphics2D para dibujar en la nueva imagen
+       Graphics2D g2d = nuevaImagen.createGraphics();
+   
+       // Configurar la composición alfa para aplicar la opacidad
+       AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);
+       g2d.setComposite(alphaComposite);
+   
+       // Dibujar el Icon en la nueva imagen
+       imagenO.paintIcon(null, g2d, 0, 0);
+   
+       // Liberar los recursos del Graphics2D
+       g2d.dispose();
+   
+       // Crear un nuevo ImageIcon con la imagen modificada y devolverlo
+       return new ImageIcon(nuevaImagen);
     }
 
     public void ponerOpaco(){
