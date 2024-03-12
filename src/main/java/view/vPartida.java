@@ -58,18 +58,21 @@ public class vPartida extends javax.swing.JFrame {
 
         btnSalirP.setBackground(new java.awt.Color(255, 255, 153));
         btnSalirP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSalirP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/SALIRBTN.jpg"))); // NOI18N
         btnSalirP.setText("SALIR");
-        jPanel1.add(btnSalirP, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 100, 40));
+        jPanel1.add(btnSalirP, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 110, 50));
 
-        btnLanzartejo.setBackground(new java.awt.Color(255, 153, 153));
+        btnLanzartejo.setBackground(new java.awt.Color(153, 0, 0));
         btnLanzartejo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLanzartejo.setForeground(new java.awt.Color(255, 255, 255));
+        btnLanzartejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/LANZARBTN.jpg"))); // NOI18N
         btnLanzartejo.setText("LANZAR TEJO");
         btnLanzartejo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLanzartejoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 140, 40));
+        jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 130, 50));
 
         panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -85,10 +88,10 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4B.setText("jLabel3");
         panel2.add(jLabel4B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 200, -1));
 
-        jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/panelB.png"))); // NOI18N
-        panel2.add(jLabelFondoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 380, 300));
+        jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo b.jpg"))); // NOI18N
+        panel2.add(jLabelFondoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 400, 350));
 
-        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 370, 290));
+        jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 390, 310));
 
         panel1.setBackground(new java.awt.Color(0, 0, 0, 0));
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -106,10 +109,10 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4A.setText("jLabel3");
         panel1.add(jLabel4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, -1));
 
-        jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/panelA.png"))); // NOI18N
-        panel1.add(jLabelFondoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 380, 320));
+        jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo a.jpg"))); // NOI18N
+        panel1.add(jLabelFondoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 310));
 
-        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 290));
+        jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 390, 310));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/ventanapartida.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
