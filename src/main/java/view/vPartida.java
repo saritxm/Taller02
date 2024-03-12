@@ -71,7 +71,7 @@ public class vPartida extends javax.swing.JFrame {
         btnLanzartejo.setForeground(new java.awt.Color(255, 255, 255));
         btnLanzartejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/LANZARBTN.jpg"))); // NOI18N
         btnLanzartejo.setText("LANZAR TEJO");
-        jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 140, 40));
+        jPanel1.add(btnLanzartejo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 130, 50));
 
         panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
