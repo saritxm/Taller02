@@ -167,7 +167,7 @@ public class vPartida extends javax.swing.JFrame {
     public void ponerOpaco(){
         try {
             // Cargar el icono desde un archivo PNG
-            Icon iconoOriginal = new ImageIcon(vPartida.class.getResource("panelA.png"));
+            Icon iconoOriginal = new ImageIcon(vPartida.class.getResource("equipo a.jpg"));
 
             // Reducir la opacidad del Icono
             Icon iconoModificado = cambiarOpacidad(iconoOriginal, 0.5f); // 50% de opacidad
