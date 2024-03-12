@@ -146,6 +146,7 @@ public class vPartida extends javax.swing.JFrame {
     public void mostrarResultado(String jugadores){
         JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
     }
+
     public ImageIcon cambiarOpacidad(Icon imagenO ,float opacidad ){
 
        //comentario random
@@ -161,6 +162,10 @@ public class vPartida extends javax.swing.JFrame {
         img2dm.drawImage(nueva, 0, 0, null);
         img2d.dispose();
         return new ImageIcon(nueva);
+    }
+
+    public void ponerOpaco(Icon imagenO ,float opacidad){
+        jLabelFondoA.setIcon(cambiarOpacidad(imagenO, opacidad));
     }
     public Icon getImageIcon1(){
         return jLabelFondoB.getIcon(); 
