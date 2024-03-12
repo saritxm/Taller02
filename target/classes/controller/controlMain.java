@@ -116,7 +116,7 @@ public class controlMain implements ActionListener {
     private void desabilitar(int x){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
-            vp.ponerOpaco(vp.getImageIcon1(),0.5f);
+            vp.ponerOpaco();
         } else {
             //Desabilitar panel b
             

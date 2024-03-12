@@ -164,8 +164,19 @@ public class vPartida extends javax.swing.JFrame {
         return new ImageIcon(nueva);
     }
 
-    public void ponerOpaco(Icon imagenO ,float opacidad){
-        jLabelFondoA.setIcon(cambiarOpacidad(imagenO, opacidad));
+    public void ponerOpaco(){
+        try {
+            // Cargar el icono desde un archivo PNG
+            Icon iconoOriginal = new ImageIcon(vPartida.class.getResource("panelA.png"));
+
+            // Reducir la opacidad del Icono
+            Icon iconoModificado = cambiarOpacidad(iconoOriginal, 0.5f); // 50% de opacidad
+
+            // Establecer el icono modificado en el JLabel
+            jLabelFondoA.setIcon(iconoModificado);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     public Icon getImageIcon1(){
         return jLabelFondoB.getIcon(); 
