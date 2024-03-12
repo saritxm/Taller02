@@ -101,7 +101,6 @@ public class vPartida extends javax.swing.JFrame {
 
         jLabel2A.setText("jLabel5");
         panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, 20));
-        panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, 20));
 
         jLabel3A.setText("jLabel5");
         panel1.add(jLabel3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 180, -1));
@@ -127,19 +126,14 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JButton btnSalirP;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel1A;
-    public javax.swing.JLabel jLabel1A;
     private javax.swing.JLabel jLabel1B;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel2A;
-    public javax.swing.JLabel jLabel2A;
     private javax.swing.JLabel jLabel2B;
-    public javax.swing.JLabel jLabel3A;
     public javax.swing.JLabel jLabel3A;
     private javax.swing.JLabel jLabel3B;
     public javax.swing.JLabel jLabel4A;
-    public javax.swing.JLabel jLabel4A;
     private javax.swing.JLabel jLabel4B;
-    public javax.swing.JLabel jLabelFondoA;
     public javax.swing.JLabel jLabelFondoA;
     private javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
@@ -153,7 +147,9 @@ public class vPartida extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
     }
     public ImageIcon cambiarOpacidad(Icon imagenO ,float opacidad ){
-       
+
+       //comentario random
+
         BufferedImage nueva = new BufferedImage(imagenO.getIconWidth(),imagenO.getIconHeight(),BufferedImage.TYPE_INT_ARGB);
         Graphics2D img2d = nueva.createGraphics();
         AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);

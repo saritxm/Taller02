@@ -147,7 +147,9 @@ public class vPartida extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
     }
     public ImageIcon cambiarOpacidad(Icon imagenO ,float opacidad ){
-       
+
+       //comentario random
+
         BufferedImage nueva = new BufferedImage(imagenO.getIconWidth(),imagenO.getIconHeight(),BufferedImage.TYPE_INT_ARGB);
         Graphics2D img2d = nueva.createGraphics();
         AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);
