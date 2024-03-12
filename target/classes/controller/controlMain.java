@@ -113,9 +113,10 @@ public class controlMain implements ActionListener {
         vp.dispose();
     }
 
-    private void desabilitar(int x){
+    private void desabilitar(int turnos){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
+            vp.cambiarOpacidad();
         } else {
             //Desabilitar pabel b
         }

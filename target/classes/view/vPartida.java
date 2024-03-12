@@ -3,8 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.awt.AlphaComposite;
+import javax.swing.Icon;
 
 /**
  *
@@ -15,7 +19,7 @@ public class vPartida extends javax.swing.JFrame {
     /**
      * Creates new form vPartida
      */
-    public vPartida() {
+    public vPartida(){
         setTitle("Partida de tejo");
         initComponents();
         setVisible(true);
@@ -93,7 +97,7 @@ public class vPartida extends javax.swing.JFrame {
         panel1.add(jLabel1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 190, 20));
 
         jLabel2A.setText("jLabel5");
-        panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, -1));
+        panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, 20));
 
         jLabel3A.setText("jLabel5");
         panel1.add(jLabel3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 180, -1));
@@ -118,16 +122,16 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JButton btnLanzartejo;
     public javax.swing.JButton btnSalirP;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel1A;
+    public javax.swing.JLabel jLabel1A;
     private javax.swing.JLabel jLabel1B;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel2A;
+    public javax.swing.JLabel jLabel2A;
     private javax.swing.JLabel jLabel2B;
-    private javax.swing.JLabel jLabel3A;
+    public javax.swing.JLabel jLabel3A;
     private javax.swing.JLabel jLabel3B;
-    private javax.swing.JLabel jLabel4A;
+    public javax.swing.JLabel jLabel4A;
     private javax.swing.JLabel jLabel4B;
-    private javax.swing.JLabel jLabelFondoA;
+    public javax.swing.JLabel jLabelFondoA;
     private javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
     private java.awt.Panel panel1;
@@ -138,5 +142,25 @@ public class vPartida extends javax.swing.JFrame {
     }
     public void mostrarResultado(String jugadores){
         JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
+    }
+    public ImageIcon cambiarOpacidad(Icon imagenO ,float opacidad ){
+       
+        BufferedImage nueva = new BufferedImage(imagenO.getIconWidth(),imagenO.getIconHeight(),BufferedImage.TYPE_INT_ARGB);
+        Graphics2D img2d = nueva.createGraphics();
+        AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);
+        imagenO.paintIcon(null,img2d,0,0);
+        img2d.dispose();
+        BufferedImage imagenModificada = new BufferedImage(nueva.getWidth(), nueva.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D img2dm = imagenModificada.createGraphics();
+        img2d.setComposite(alphaComposite);
+        img2dm.drawImage(nueva, 0, 0, null);
+        img2d.dispose();
+        return new ImageIcon(nueva);
+    }
+    public Icon getImageIcon1(){
+        return jLabelFondoB.getIcon(); 
+    }
+    public Icon getImageIcon2(){
+        return jLabelFondoA.getIcon(); 
     }
 }

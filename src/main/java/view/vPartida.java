@@ -3,9 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.awt.AlphaComposite;
+import javax.swing.Icon;
 
 /**
  *
@@ -16,7 +19,7 @@ public class vPartida extends javax.swing.JFrame {
     /**
      * Creates new form vPartida
      */
-    public vPartida() {
+    public vPartida(){
         setTitle("Partida de tejo");
         initComponents();
         setVisible(true);
@@ -140,8 +143,24 @@ public class vPartida extends javax.swing.JFrame {
     public void mostrarResultado(String jugadores){
         JOptionPane.showMessageDialog(null, jugadores, "EQUIPO GANADOR", JOptionPane.INFORMATION_MESSAGE);
     }
-    public void cambiarOpacidad(){
-        Color backGroundcolor = new Color(jLabel1A.getBackground().getRed(),jLabel1A.getBackground().getGreen(),jLabel1A.getBackground().getBlue(),128);
-        jLabel1A.setBackground(backGroundcolor);
+    public ImageIcon cambiarOpacidad(Icon imagenO ,float opacidad ){
+       
+        BufferedImage nueva = new BufferedImage(imagenO.getIconWidth(),imagenO.getIconHeight(),BufferedImage.TYPE_INT_ARGB);
+        Graphics2D img2d = nueva.createGraphics();
+        AlphaComposite alphaComposite = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacidad);
+        imagenO.paintIcon(null,img2d,0,0);
+        img2d.dispose();
+        BufferedImage imagenModificada = new BufferedImage(nueva.getWidth(), nueva.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D img2dm = imagenModificada.createGraphics();
+        img2d.setComposite(alphaComposite);
+        img2dm.drawImage(nueva, 0, 0, null);
+        img2d.dispose();
+        return new ImageIcon(nueva);
+    }
+    public Icon getImageIcon1(){
+        return jLabelFondoB.getIcon(); 
+    }
+    public Icon getImageIcon2(){
+        return jLabelFondoA.getIcon(); 
     }
 }
