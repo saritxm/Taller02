@@ -96,8 +96,8 @@ public class vPartida extends javax.swing.JFrame {
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1A.setBackground(new java.awt.Color(204, 255, 255));
-        jLabel1A.setText("jLabel5");
-        panel1.add(jLabel1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 190, 20));
+        jLabel1A.setText("XD");
+        panel1.add(jLabel1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 190, 20));
 
         jLabel2A.setText("jLabel5");
         panel1.add(jLabel2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, 20));
@@ -126,14 +126,14 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JButton btnSalirP;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel1A;
-    private javax.swing.JLabel jLabel1B;
+    public javax.swing.JLabel jLabel1B;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel2A;
-    private javax.swing.JLabel jLabel2B;
+    public javax.swing.JLabel jLabel2B;
     public javax.swing.JLabel jLabel3A;
-    private javax.swing.JLabel jLabel3B;
+    public javax.swing.JLabel jLabel3B;
     public javax.swing.JLabel jLabel4A;
-    private javax.swing.JLabel jLabel4B;
+    public javax.swing.JLabel jLabel4B;
     public javax.swing.JLabel jLabelFondoA;
     private javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
@@ -173,9 +173,19 @@ public class vPartida extends javax.swing.JFrame {
        return new ImageIcon(nuevaImagen);
     }
 
-    public void ponerOpaco(){
+    public void ponerOpaco1(){
         try {
             Icon iconoModificado = cambiarOpacidad(getImageIcon1(), 0.5f); // 50% de opacidad
+
+            // Establecer el icono modificado en el JLabel
+            jLabelFondoA.setIcon(iconoModificado);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void ponerOpaco2(){
+        try {
+            Icon iconoModificado = cambiarOpacidad(getImageIcon2(), 0.5f); // 50% de opacidad
 
             // Establecer el icono modificado en el JLabel
             jLabelFondoA.setIcon(iconoModificado);
