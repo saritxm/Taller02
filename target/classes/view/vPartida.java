@@ -108,7 +108,7 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4A.setText("jLabel3");
         panel1.add(jLabel4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, -1));
 
-        jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo a.jpg"))); // NOI18N
+        jLabelFondoA.setIcon(new ImageIcon("/view/equipo a.jpg")); // NOI18N
         panel1.add(jLabelFondoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 310));
 
         jPanel1.add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 390, 310));
