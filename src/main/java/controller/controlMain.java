@@ -113,16 +113,19 @@ public class controlMain implements ActionListener {
         vp.dispose();
     }
 
-    private void desabilitar(int x){
+    private void desabilitar(int turnos){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
+            vp.cambiarOpacidad();
         } else {
             //Desabilitar pabel b
         }
     }
 
+    //Poner los nombre de los jugadores 
     private void asignarNombres(){
-        
+        cPlayers.getEquipo1().getPlayers();
+        cPlayers.getEquipo2().getPlayers();
     }
 
     // Actions listeners
