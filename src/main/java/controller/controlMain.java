@@ -49,6 +49,7 @@ public class controlMain implements ActionListener {
         // Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         iniciar();
+        
     }
 
     private void iniciar() {
@@ -113,19 +114,27 @@ public class controlMain implements ActionListener {
         vp.dispose();
     }
 
-    private void desabilitar(int x){
+    private void desabilitar(int turnos){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
-            vp.ponerOpaco();
+            vp.ponerOpaco1();
         } else {
-            
+            vp.ponerOpaco2();
         }
     }
 
     //Poner los nombre de los jugadores 
     private void asignarNombres(){
         cPlayers.getEquipo1().getPlayers();
+        vp.jLabel1A.setText(cPlayers.getEquipo1().getPlayers().get(0).getNombre());
+        vp.jLabel2A.setText(cPlayers.getEquipo1().getPlayers().get(1).getNombre());
+        vp.jLabel3A.setText(cPlayers.getEquipo1().getPlayers().get(2).getNombre());
+        vp.jLabel4A.setText(cPlayers.getEquipo1().getPlayers().get(3).getNombre());
         cPlayers.getEquipo2().getPlayers();
+        vp.jLabel1B.setText(cPlayers.getEquipo2().getPlayers().get(0).getNombre());
+        vp.jLabel2B.setText(cPlayers.getEquipo2().getPlayers().get(1).getNombre());
+        vp.jLabel3B.setText(cPlayers.getEquipo2().getPlayers().get(2).getNombre());
+        vp.jLabel4B.setText(cPlayers.getEquipo2().getPlayers().get(3).getNombre());
     }
 
     // Actions listeners
@@ -149,6 +158,7 @@ public class controlMain implements ActionListener {
             vp.setVisible(true);
             vj.setVisible(false);
             desabilitar(turnos);
+            asignarNombres();
         }
         // Lanzar tejo(jugada)
         if (e.getSource() == this.vp.btnLanzartejo) {

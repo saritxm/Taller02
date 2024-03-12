@@ -6,7 +6,7 @@ import view.vPartida;
 
 public class Launcher {
     public static void main(String[] args)  throws IOException{
-        new vPartida();
+        new controlMain();
     }
     
 }

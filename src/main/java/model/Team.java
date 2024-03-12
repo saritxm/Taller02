@@ -62,6 +62,10 @@ public class Team {
     public ArrayList<Player> getPlayers() {
         return this.players;
     }
+    public String getPlayerName(int x) {
+        return this.players.get(x).getNombre();
+    }
+    
 
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
