@@ -118,7 +118,6 @@ public class controlMain implements ActionListener {
             //Desabilitar panel a
             vp.ponerOpaco();
         } else {
-            //Desabilitar panel b
             
         }
     }
