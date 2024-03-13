@@ -86,12 +86,13 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4B.setText("jLabel3");
         panel2.add(jLabel4B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 200, -1));
 
+        jLabelFondoB.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo b.jpg"))); // NOI18N
         panel2.add(jLabelFondoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 400, 350));
 
         jPanel1.add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 390, 310));
 
-        panel1.setBackground(new java.awt.Color(0, 0, 0, 0));
+        panel1.setBackground(new java.awt.Color(255, 255, 255));
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1A.setBackground(new java.awt.Color(204, 255, 255));
@@ -107,6 +108,7 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4A.setText("jLabel3");
         panel1.add(jLabel4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, -1));
 
+        jLabelFondoA.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo a.jpg"))); // NOI18N
         panel1.add(jLabelFondoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 310));
 
@@ -134,7 +136,7 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel4A;
     public javax.swing.JLabel jLabel4B;
     public javax.swing.JLabel jLabelFondoA;
-    private javax.swing.JLabel jLabelFondoB;
+    public javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
@@ -172,26 +174,40 @@ public class vPartida extends javax.swing.JFrame {
        return new ImageIcon(nuevaImagen);
     }
 
-    public void ponerOpaco1(){
+    public void ponerOpaco1(float f){
         try {
-            Icon iconoModificado = cambiarOpacidad(getImageIcon1(), 0.5f); // 50% de opacidad
-
+            Icon iconoModificadoA= cambiarOpacidad(getImageIcon1(), f); // 50% de opacidad
             // Establecer el icono modificado en el JLabel
-            jLabelFondoA.setIcon(iconoModificado);
+            jLabelFondoA.setIcon(iconoModificadoA);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void ponerOpaco2(){
+    public void ponerOpaco2(float f){
         try {
-            Icon iconoModificado = cambiarOpacidad(getImageIcon2(), 0.5f); // 50% de opacidad
+            Icon iconoModificadoB = cambiarOpacidad(getImageIcon2(), f); // 50% de opacidad
 
             // Establecer el icono modificado en el JLabel
-            jLabelFondoB.setIcon(iconoModificado);
+            jLabelFondoB.setIcon(iconoModificadoB);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    
+    public void reiniciarOpacidad() {
+        try {
+            // Restaurar la opacidad original de los iconos
+            Icon iconoOriginalA = new ImageIcon(getClass().getResource("/view/equipo a.jpg"));
+            Icon iconoOriginalB = new ImageIcon(getClass().getResource("/view/equipo b.jpg"));
+
+            // Establecer los iconos originales en los JLabels
+            jLabelFondoA.setIcon(iconoOriginalA);
+            jLabelFondoB.setIcon(iconoOriginalB);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     public Icon getImageIcon1(){
         return jLabelFondoA.getIcon(); 
     }
