@@ -34,11 +34,14 @@ public class Final extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jOtra.setBackground(null);
-        jOtra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugar otra.jpg"))); // NOI18N
         getContentPane().add(jOtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 260, 50));
 
         jSalir.setBackground(null);
-        jSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/salirbtnjugarotra.jpg"))); // NOI18N
+        jSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSalirActionPerformed(evt);
+            }
+        });
         getContentPane().add(jSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 260, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugarotra.png"))); // NOI18N
@@ -46,6 +49,10 @@ public class Final extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSalirActionPerformed
 
     private void transparencia(){
         jOtra.setOpaque(false);
