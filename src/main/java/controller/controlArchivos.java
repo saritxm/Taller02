@@ -51,7 +51,7 @@ public class controlArchivos {
         }
         for (String i : listaEq) {
             String nombre = prop.getProperty(i + ".name");
-            String dep = prop.getProperty(i + ".name");
+            String dep = prop.getProperty(i + ".dep");
             int num = Integer.parseInt(prop.getProperty(i + ".num"));
             equipos.add(new Team(nombre, dep, num));
         }

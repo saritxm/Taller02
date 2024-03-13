@@ -5,8 +5,11 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 import model.Player;
 import model.Team;
+import model.Result;
+import view.Final;
 import view.vBienvenida;
 import view.vJugador;
 import view.vJugador2;
@@ -20,8 +23,11 @@ public class controlMain implements ActionListener {
     private vJugador vj;
     private vJugador2 vj2;
     private vPartida vp;
+    private Final vf;
     private Player p1, p2, p3, p4, p5, p6, p7, p8;
     private ArrayList<Player> players;
+    private boolean primerapartida = false;
+    private ArrayList<Result> resultados;
 
     private int x = 0; // Turnos jugadores
     private int turnos = 1; // Turnos equpos
@@ -34,6 +40,7 @@ public class controlMain implements ActionListener {
         this.vj = new vJugador();
         this.vj2 = new vJugador2();
         this.vp = new vPartida();
+        this.vf = new Final();
         // Escucha botones de la vista
         this.vb.btnContinuar.addActionListener(this);
         this.vb.btnSalir1.addActionListener(this);
@@ -43,11 +50,14 @@ public class controlMain implements ActionListener {
         this.vj2.btnRegistrarJv2.addActionListener(this);
         this.vp.btnSalirP.addActionListener(this);
         this.vp.btnLanzartejo.addActionListener(this);
+        this.vf.jOtra.addActionListener(this);
+        this.vf.jOtra.addActionListener(this);
         // Controladores
         this.cArchivos = new controlArchivos();
         this.cPlayers = new controlPlayers();
         // Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
+        this.resultados = new ArrayList<>();
         iniciar();
         
     }
@@ -117,11 +127,34 @@ public class controlMain implements ActionListener {
     private void desabilitar(int turnos){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
-            vp.ponerOpaco2(1f);
             vp.ponerOpaco1(0.5f);
         } else {
-            vp.ponerOpaco1(1f);
             vp.ponerOpaco2(0.5f);
+        }
+    }
+
+    private void ganador() {
+        if(puntaje1>=27){
+            resultado(cPlayers.getEquipo1());
+            resultados.add(new Result(cPlayers.getEquipo1(), cPlayers.getEquipo2()));
+        }
+        else if (puntaje2>=27){
+            resultado(cPlayers.getEquipo2());
+            resultados.add(new Result(cPlayers.getEquipo2(), cPlayers.getEquipo1()));
+        }
+
+        if(puntaje1>=27 || puntaje2>=27){
+            vp.dispose();
+            if (!primerapartida) {
+                vf.setVisible(true);
+                primerapartida = true;
+            }   
+            else{
+                try {
+                    cArchivos.leerTodo();
+                } catch (Exception e) {
+                }
+            }
         }
     }
 
@@ -163,7 +196,7 @@ public class controlMain implements ActionListener {
             asignarNombres();
         }
         // Lanzar tejo(jugada)
-        if (e.getSource() == this.vp.btnLanzartejo) {
+        else if (e.getSource() == this.vp.btnLanzartejo) {
             turnos++;
             desabilitar(turnos);
             if (turnos % 2 == 0) {
@@ -172,21 +205,26 @@ public class controlMain implements ActionListener {
                 }
                 int aux = cPlayers.getEquipo1().getPlayers().get(x).lanzarTejo();
                 puntaje1 += aux;
-                vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre(), aux);
+                vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre()+" del equipo "+cPlayers.getEquipo1().getName(), aux);
+                vp.pEquipo1.setText("Puntaje: "+puntaje1);
 
-                if (puntaje1 >= 27) {
-                    resultado(cPlayers.getEquipo1());
-                }
+                ganador();
             } else {
                 int aux2 = cPlayers.getEquipo2().getPlayers().get(x).lanzarTejo();
                 puntaje2 += aux2;
-                vp.mostrarMensaje(cPlayers.getEquipo2().getPlayers().get(x).getNombre(), aux2);
-
+                vp.mostrarMensaje(cPlayers.getEquipo2().getPlayers().get(x).getNombre()+" del equipo "+cPlayers.getEquipo2().getName(), aux2);
+                vp.pEquipo2.setText("Puntaje: "+puntaje2);
                 x++;
-                if (puntaje2 >= 27) {
-                    resultado(cPlayers.getEquipo2());
-                }
+                ganador();
             }
+        } else if (e.getSource() == this.vf.jSalir){
+            try {
+                cArchivos.leerTodo();
+            } catch (Exception e2) {
+                
+            }
+        } else  if (e.getSource() == this.vf.jOtra){
+            
         }
 
     }

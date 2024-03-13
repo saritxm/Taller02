@@ -41,12 +41,14 @@ public class vPartida extends javax.swing.JFrame {
         jLabel2B = new javax.swing.JLabel();
         jLabel3B = new javax.swing.JLabel();
         jLabel4B = new javax.swing.JLabel();
+        pEquipo2 = new javax.swing.JLabel();
         jLabelFondoB = new javax.swing.JLabel();
         panel1 = new java.awt.Panel();
         jLabel1A = new javax.swing.JLabel();
         jLabel2A = new javax.swing.JLabel();
         jLabel3A = new javax.swing.JLabel();
         jLabel4A = new javax.swing.JLabel();
+        pEquipo1 = new javax.swing.JLabel();
         jLabelFondoA = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -86,6 +88,9 @@ public class vPartida extends javax.swing.JFrame {
         jLabel4B.setText("jLabel3");
         panel2.add(jLabel4B, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 200, -1));
 
+        pEquipo2.setText("Puntaje: 0");
+        panel2.add(pEquipo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 120, 20));
+
         jLabelFondoB.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo b.jpg"))); // NOI18N
         panel2.add(jLabelFondoB, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 400, 350));
@@ -107,6 +112,9 @@ public class vPartida extends javax.swing.JFrame {
 
         jLabel4A.setText("jLabel3");
         panel1.add(jLabel4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 200, -1));
+
+        pEquipo1.setText("Puntaje: 0");
+        panel1.add(pEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 20, 80, -1));
 
         jLabelFondoA.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo a.jpg"))); // NOI18N
@@ -138,6 +146,8 @@ public class vPartida extends javax.swing.JFrame {
     public javax.swing.JLabel jLabelFondoA;
     public javax.swing.JLabel jLabelFondoB;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JLabel pEquipo1;
+    public javax.swing.JLabel pEquipo2;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     // End of variables declaration//GEN-END:variables
@@ -179,6 +189,7 @@ public class vPartida extends javax.swing.JFrame {
             Icon iconoModificadoA= cambiarOpacidad(getImageIcon1(), f); // 50% de opacidad
             // Establecer el icono modificado en el JLabel
             jLabelFondoA.setIcon(iconoModificadoA);
+            jLabelFondoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo b.jpg")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -189,20 +200,7 @@ public class vPartida extends javax.swing.JFrame {
 
             // Establecer el icono modificado en el JLabel
             jLabelFondoB.setIcon(iconoModificadoB);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-    public void reiniciarOpacidad() {
-        try {
-            // Restaurar la opacidad original de los iconos
-            Icon iconoOriginalA = new ImageIcon(getClass().getResource("/view/equipo a.jpg"));
-            Icon iconoOriginalB = new ImageIcon(getClass().getResource("/view/equipo b.jpg"));
-
-            // Establecer los iconos originales en los JLabels
-            jLabelFondoA.setIcon(iconoOriginalA);
-            jLabelFondoB.setIcon(iconoOriginalB);
+            jLabelFondoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/equipo a.jpg")));
         } catch (Exception e) {
             e.printStackTrace();
         }
