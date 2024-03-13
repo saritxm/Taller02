@@ -34,9 +34,11 @@ public class Final extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jOtra.setBackground(null);
+        jOtra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugar otra.jpg"))); // NOI18N
         getContentPane().add(jOtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 260, 50));
 
         jSalir.setBackground(null);
+        jSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/salirbtnjugarotra.jpg"))); // NOI18N
         getContentPane().add(jSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 260, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/jugarotra.png"))); // NOI18N

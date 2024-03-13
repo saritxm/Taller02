@@ -51,7 +51,7 @@ public class controlMain implements ActionListener {
         this.vp.btnSalirP.addActionListener(this);
         this.vp.btnLanzartejo.addActionListener(this);
         this.vf.jOtra.addActionListener(this);
-        this.vf.jOtra.addActionListener(this);
+        this.vf.jSalir.addActionListener(this);
         // Controladores
         this.cArchivos = new controlArchivos();
         this.cPlayers = new controlPlayers();
@@ -181,10 +181,11 @@ public class controlMain implements ActionListener {
         }
         // Botones para salir
         else if (e.getSource() == this.vb.btnSalir1 || e.getSource() == this.vj.btnSalirvJ
-                || e.getSource() == this.vj2.btnSalirvJv2) {
+                || e.getSource() == this.vj2.btnSalirvJv2 || e.getSource() == this.vf.jSalir) {
             this.vb.dispose();
             this.vj.dispose();
             this.vj2.dispose();
+            this.vf.dispose();
         } else if (e.getSource() == this.vj.btnRegistrarJ) {
             crearJugadores();
             asignarDatosplayers();
