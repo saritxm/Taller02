@@ -117,9 +117,11 @@ public class controlMain implements ActionListener {
     private void desabilitar(int turnos){
         if (turnos % 2 == 0) {
             //Desabilitar panel a
-            vp.ponerOpaco1();
+            vp.ponerOpaco2(1f);
+            vp.ponerOpaco1(0.5f);
         } else {
-            vp.ponerOpaco2();
+            vp.ponerOpaco1(1f);
+            vp.ponerOpaco2(0.5f);
         }
     }
 
@@ -165,7 +167,9 @@ public class controlMain implements ActionListener {
             turnos++;
             desabilitar(turnos);
             if (turnos % 2 == 0) {
-                if (x == 4) x = 0;
+                if (x == 4) {
+                    x = 0;
+                }
                 int aux = cPlayers.getEquipo1().getPlayers().get(x).lanzarTejo();
                 puntaje1 += aux;
                 vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre(), aux);
