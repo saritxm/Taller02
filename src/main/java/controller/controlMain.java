@@ -225,7 +225,7 @@ public class controlMain implements ActionListener {
                 
             }
         } else  if (e.getSource() == this.vf.jOtra){
-            vp.setVisible(true);
+            vj2.setVisible(true);
         }
 
     }
