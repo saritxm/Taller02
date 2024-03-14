@@ -14,7 +14,8 @@ public class Player {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if(nombre.isBlank()) throw new NullPointerException();
+        else this.nombre = nombre;
     }
 
     public int getEdad() {
@@ -30,7 +31,8 @@ public class Player {
     }
 
     public void setCedula(String cedula) {
-        this.cedula = cedula;
+        if(cedula.isBlank()) throw new NullPointerException();
+        else this.cedula = cedula;
     }
 
     public int lanzarTejo(){

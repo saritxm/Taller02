@@ -212,4 +212,8 @@ public class vPartida extends javax.swing.JFrame {
     public Icon getImageIcon2(){
         return jLabelFondoB.getIcon(); 
     }
+
+    public void terminado(){
+        JOptionPane.showMessageDialog(null, "Ya jugaste las 2 partidas, vuelve pronto", "PROGRAMA FINALIZADO", JOptionPane.INFORMATION_MESSAGE);
+    }
 }
