@@ -13,7 +13,9 @@ import view.vBienvenida;
 import view.vJugador;
 import view.vJugador2;
 import view.vPartida;
-
+/**
+ * Clase controladora principal
+ */
 public class controlMain implements ActionListener {
 
     private controlArchivos cArchivos;
