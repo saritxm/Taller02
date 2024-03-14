@@ -33,6 +33,7 @@ public class controlPlayers {
     public void obtenerEquipos(){
         Random nuRandom = new Random();
         int x = nuRandom.nextInt(equipos.size());
+        this.equipos.clear();
         this.equipo1 = equipos.get(x);
         while(true){
             int x2 = nuRandom.nextInt(equipos.size());
