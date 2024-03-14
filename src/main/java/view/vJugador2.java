@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nahin
@@ -284,4 +286,11 @@ public class vJugador2 extends javax.swing.JFrame {
     private javax.swing.JLabel txtNombrev2;
     private javax.swing.JLabel txtTitulo2;
     // End of variables declaration//GEN-END:variables
+
+    public void edadInvalida() {
+        JOptionPane.showMessageDialog(null, "Ingrese los datos correctos", "Informacion invalida", JOptionPane.ERROR_MESSAGE);
+    }
+    public void camposVacios() {
+        JOptionPane.showMessageDialog(null, "Llene todos los capos", "Campos vacios", JOptionPane.ERROR_MESSAGE);
+    }
 }

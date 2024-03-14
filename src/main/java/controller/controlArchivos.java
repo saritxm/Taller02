@@ -109,8 +109,8 @@ public class controlArchivos {
                 archivo.writeChars(j);
             }
             
-            if(win) archivo.writeChars("Gano  ");
-            else    archivo.writeChars("Perdio");
+            if(win)     archivo.writeChars("Gano  ");
+            if(!win)    archivo.writeChars("Perdio");
             
         }catch(IOException ex){
             ex.printStackTrace();
@@ -192,8 +192,8 @@ public class controlArchivos {
                 nombrej3 = quitarEspacios(nombrej3);
                 nombrej4 = quitarEspacios(nombrej4);
 
-                System.out.println("Clave: "+clave+" |  # de Equipo: "+numE+" |  Nombre de equipo: "+nombreE+" |  Jugador #1: "+ nombrej1+" |  Jugador #1: "
-                            +nombrej1+" |  Jugador #2: "+nombrej2+" |  Jugador #3: "+nombrej3+" |  Jugador #4: "+nombrej4+" | Resultado: "+resultado);
+                System.out.println("Clave: "+clave+" |  # de Equipo: "+numE+" |  Nombre de equipo: "+nombreE+" |  Jugador #1: "+ nombrej1+
+                        " |  Jugador #2: "+nombrej2+" |  Jugador #3: "+nombrej3+" |  Jugador #4: "+nombrej4+" | Resultado: "+resultado);
 
             }
         } catch (FileNotFoundException fnfe) {fnfe.printStackTrace();

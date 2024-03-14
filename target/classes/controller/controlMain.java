@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
 import model.Player;
 import model.Team;
 import model.Result;
@@ -59,7 +58,7 @@ public class controlMain implements ActionListener {
         this.players = new ArrayList<Player>();
         this.resultados = new ArrayList<>();
         iniciar();
-        
+
     }
 
     private void iniciar() {
@@ -77,7 +76,7 @@ public class controlMain implements ActionListener {
         this.p8 = new Player();
     }
 
-    private void asignarDatosplayers() {
+    private void asignarDatosplayers() throws NullPointerException, NumberFormatException{
         players.clear();
         p1.setNombre(vj.cajaNombreJ1.getText());
         p1.setEdad(Integer.parseInt(vj.cajaEdadJ1.getText()));
@@ -112,9 +111,48 @@ public class controlMain implements ActionListener {
         players.add(p7);
         players.add(p8);
     }
+<<<<<<< HEAD
+=======
+
+    private void asignarDatosplayers2() throws NullPointerException, NumberFormatException{
+        players.clear();
+        p1.setNombre(vj2.cajaNombreJ1v2.getText());
+        p1.setEdad(Integer.parseInt(vj2.cajaEdadJ1v2.getText()));
+        p1.setCedula(vj2.cajaCedulaJ1v2.getText());
+        p2.setNombre(vj2.cajaNombreJ2v2.getText());
+        p2.setEdad(Integer.parseInt(vj2.cajaEdadJ2v2.getText()));
+        p2.setCedula(vj2.cajaCedulaJ2v2.getText());
+        p3.setNombre(vj2.cajaNombreJ3v2.getText());
+        p3.setEdad(Integer.parseInt(vj2.cajaEdadJ3v2.getText()));
+        p3.setCedula(vj2.cajaCedulaJ3v2.getText());
+        p4.setNombre(vj2.cajaNombreJ4v2.getText());
+        p4.setEdad(Integer.parseInt(vj2.cajaEdadJ4v2.getText()));
+        p4.setCedula(vj2.cajaCedulaJ4v2.getText());
+        p5.setNombre(vj2.cajaNombreJ5v2.getText());
+        p5.setEdad(Integer.parseInt(vj2.cajaEdadJ5v2.getText()));
+        p5.setCedula(vj2.cajaCedulaJ5v2.getText());
+        p6.setNombre(vj2.cajaNombreJ6v2.getText());
+        p6.setEdad(Integer.parseInt(vj2.cajaEdadJ6v2.getText()));
+        p6.setCedula(vj2.cajaCedulaJ6v2.getText());
+        p7.setNombre(vj2.cajaNombreJ7v2.getText());
+        p7.setEdad(Integer.parseInt(vj2.cajaEdadJ7v2.getText()));
+        p7.setCedula(vj2.cajaCedulaJ7v2.getText());
+        p8.setNombre(vj2.cajaNombreJ8v2.getText());
+        p8.setEdad(Integer.parseInt(vj2.cajaEdadJ8v2.getText()));
+        p8.setCedula(vj2.cajaCedulaJ8v2.getText());
+        players.add(p1);
+        players.add(p2);
+        players.add(p3);
+        players.add(p4);
+        players.add(p5);
+        players.add(p6);
+        players.add(p7);
+        players.add(p8);
+    }
+>>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
 
     private void resultado(Team x) {
-        String jugadoresInfo = "Equpo ganador: " + x.toString() + "Jugadores... \n";
+        String jugadoresInfo = "Equpo ganador: " + x.toString() + "\nJugadores... \n";
         for (Player i : x.getPlayers()) {
             jugadoresInfo += i.toString() + "\n";
         }
@@ -124,9 +162,9 @@ public class controlMain implements ActionListener {
         vp.dispose();
     }
 
-    private void desabilitar(int turnos){
+    private void desabilitar(int turnos) {
         if (turnos % 2 == 0) {
-            //Desabilitar panel a
+            // Desabilitar panel a
             vp.ponerOpaco1(0.5f);
         } else {
             vp.ponerOpaco2(0.5f);
@@ -134,32 +172,50 @@ public class controlMain implements ActionListener {
     }
 
     private void ganador() {
-        if(puntaje1>=27){
+        if (puntaje1 >= 27) {
             resultado(cPlayers.getEquipo1());
-            resultados.add(new Result(cPlayers.getEquipo1(), cPlayers.getEquipo2()));
-        }
-        else if (puntaje2>=27){
+            Team win = cPlayers.getEquipo1();
+            Team lose = cPlayers.getEquipo2();
+            resultados.add(new Result(win, lose));
+        } else if (puntaje2 >= 27) {
             resultado(cPlayers.getEquipo2());
-            resultados.add(new Result(cPlayers.getEquipo2(), cPlayers.getEquipo1()));
+            Team win = cPlayers.getEquipo2();
+            Team lose = cPlayers.getEquipo1();
+            resultados.add(new Result(win, lose));
         }
 
-        if(puntaje1>=27 || puntaje2>=27){
+        if (puntaje1 >= 27 || puntaje2 >= 27) {
             vp.dispose();
+            puntaje1 = 0;
+            puntaje2 = 0;
+            x = 0;
+            turnos = 1;
+            vp.pEquipo1.setText("Puntaje: " + 0);
+            vp.pEquipo2.setText("Puntaje: " + 0);
+            players.clear();
             if (!primerapartida) {
                 vf.setVisible(true);
                 primerapartida = true;
-            }   
-            else{
+            } else {
                 try {
+<<<<<<< HEAD
                     cArchivos.leerTodo();
+=======
+                    salida();
+                    this.vp.terminado();
+                    this.vb.dispose();
+                    this.vj.dispose();
+                    this.vj2.dispose();
+                    this.vf.dispose();
+>>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
                 } catch (Exception e) {
                 }
             }
         }
     }
 
-    //Poner los nombre de los jugadores 
-    private void asignarNombres(){
+    // Poner los nombre de los jugadores
+    private void asignarNombres() {
         cPlayers.getEquipo1().getPlayers();
         vp.jLabel1A.setText(cPlayers.getEquipo1().getPlayers().get(0).getNombre());
         vp.jLabel2A.setText(cPlayers.getEquipo1().getPlayers().get(1).getNombre());
@@ -172,6 +228,15 @@ public class controlMain implements ActionListener {
         vp.jLabel4B.setText(cPlayers.getEquipo2().getPlayers().get(3).getNombre());
     }
 
+    private void salida() {
+        try {
+            cArchivos.guardarResultado(resultados);
+            cArchivos.leerTodo();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
+
     // Actions listeners
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -181,20 +246,28 @@ public class controlMain implements ActionListener {
         }
         // Botones para salir
         else if (e.getSource() == this.vb.btnSalir1 || e.getSource() == this.vj.btnSalirvJ
-                || e.getSource() == this.vj2.btnSalirvJv2 || e.getSource() == this.vf.jSalir) {
+                || e.getSource() == this.vj2.btnSalirvJv2) {
             this.vb.dispose();
+            this.vp.dispose();
             this.vj.dispose();
             this.vj2.dispose();
             this.vf.dispose();
         } else if (e.getSource() == this.vj.btnRegistrarJ) {
-            crearJugadores();
-            asignarDatosplayers();
-            cPlayers.obtenerEquipos();
-            cPlayers.randomPlayers(players);
-            vp.setVisible(true);
-            vj.setVisible(false);
-            desabilitar(turnos);
-            asignarNombres();
+            try {
+                crearJugadores();
+                asignarDatosplayers();
+                cPlayers.obtenerEquipos();
+                cPlayers.randomPlayers(players);
+                vp.setVisible(true);
+                vj.setVisible(false);
+                desabilitar(turnos);
+                asignarNombres();
+            } catch (NullPointerException e2) {
+                vj.camposVacios();
+            } catch (NumberFormatException e3){
+                vj.edadInvalida();
+            }
+            
         }
         // Lanzar tejo(jugada)
         else if (e.getSource() == this.vp.btnLanzartejo) {
@@ -206,26 +279,63 @@ public class controlMain implements ActionListener {
                 }
                 int aux = cPlayers.getEquipo1().getPlayers().get(x).lanzarTejo();
                 puntaje1 += aux;
+<<<<<<< HEAD
                 vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre()+" del equipo "+cPlayers.getEquipo1().getName(), aux);
                 vp.pEquipo1.setText("Puntaje: "+puntaje1);
 
+=======
+                vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre() + " del equipo "
+                        + cPlayers.getEquipo1().getName(), aux);
+                vp.pEquipo1.setText("Puntaje: " + puntaje1);
+>>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
                 ganador();
             } else {
                 int aux2 = cPlayers.getEquipo2().getPlayers().get(x).lanzarTejo();
                 puntaje2 += aux2;
-                vp.mostrarMensaje(cPlayers.getEquipo2().getPlayers().get(x).getNombre()+" del equipo "+cPlayers.getEquipo2().getName(), aux2);
-                vp.pEquipo2.setText("Puntaje: "+puntaje2);
+                vp.mostrarMensaje(cPlayers.getEquipo2().getPlayers().get(x).getNombre() + " del equipo "
+                        + cPlayers.getEquipo2().getName(), aux2);
+                vp.pEquipo2.setText("Puntaje: " + puntaje2);
                 x++;
                 ganador();
             }
-        } else if (e.getSource() == this.vf.jSalir){
+        } else if (e.getSource() == this.vf.jSalir) {
             try {
+<<<<<<< HEAD
                 cArchivos.leerTodo();
+=======
+                salida();
+                this.vp.dispose();
+                this.vb.dispose();
+                this.vj.dispose();
+                this.vj2.dispose();
+                this.vf.dispose();
+>>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
             } catch (Exception e2) {
                 
             }
-        } else  if (e.getSource() == this.vf.jOtra){
+        } else if (e.getSource() == this.vf.jOtra) {
+            vf.setVisible(false);
             vj2.setVisible(true);
+<<<<<<< HEAD
+=======
+        } else if (e.getSource() == this.vj2.btnRegistrarJv2) {
+            try {
+                crearJugadores();
+                asignarDatosplayers2();
+                cPlayers.reinicio();
+                cPlayers.randomPlayers(players);
+                vp.setVisible(true);
+                vj2.setVisible(false);
+                desabilitar(turnos);
+                asignarNombres();
+            } catch (NullPointerException e2) {
+                vj.camposVacios();
+            } catch (NumberFormatException e3){
+                vj.edadInvalida();
+            }
+            
+            
+>>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
         }
 
     }

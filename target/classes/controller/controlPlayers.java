@@ -51,4 +51,16 @@ public class controlPlayers {
         return this.equipo2;
     }
 
+    public void reinicio() {
+        try{this.equipo1 = new Team();
+        this.equipo2 = new Team();
+        this.cArchivos.obtenerEquipos();
+        this.equipos = new ArrayList<>(this.cArchivos.getEquipos());
+        obtenerEquipos();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
