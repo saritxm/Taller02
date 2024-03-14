@@ -55,7 +55,11 @@ public class controlMain implements ActionListener {
         this.vf.jSalir.addActionListener(this);
         // Controladores
         this.cArchivos = new controlArchivos();
-        this.cPlayers = new controlPlayers();
+        this.vb.fProp.showOpenDialog(this.vb.fProp);
+        this.cArchivos.setProp(this.vb.fProp.getSelectedFile());
+        this.vb.fResult.showOpenDialog(this.vb.fResult);
+        this.cArchivos.setArchivo(this.vb.fResult.getSelectedFile());
+        this.cPlayers = new controlPlayers(this.cArchivos);
         // Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         this.resultados = new ArrayList<>();
@@ -113,8 +117,6 @@ public class controlMain implements ActionListener {
         players.add(p7);
         players.add(p8);
     }
-<<<<<<< HEAD
-=======
 
     private void asignarDatosplayers2() throws NullPointerException, NumberFormatException{
         players.clear();
@@ -151,7 +153,6 @@ public class controlMain implements ActionListener {
         players.add(p7);
         players.add(p8);
     }
->>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
 
     private void resultado(Team x) {
         String jugadoresInfo = "Equpo ganador: " + x.toString() + "\nJugadores... \n";
@@ -200,16 +201,12 @@ public class controlMain implements ActionListener {
                 primerapartida = true;
             } else {
                 try {
-<<<<<<< HEAD
-                    cArchivos.leerTodo();
-=======
                     salida();
                     this.vp.terminado();
                     this.vb.dispose();
                     this.vj.dispose();
                     this.vj2.dispose();
                     this.vf.dispose();
->>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
                 } catch (Exception e) {
                 }
             }
@@ -281,15 +278,9 @@ public class controlMain implements ActionListener {
                 }
                 int aux = cPlayers.getEquipo1().getPlayers().get(x).lanzarTejo();
                 puntaje1 += aux;
-<<<<<<< HEAD
-                vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre()+" del equipo "+cPlayers.getEquipo1().getName(), aux);
-                vp.pEquipo1.setText("Puntaje: "+puntaje1);
-
-=======
                 vp.mostrarMensaje(cPlayers.getEquipo1().getPlayers().get(x).getNombre() + " del equipo "
                         + cPlayers.getEquipo1().getName(), aux);
                 vp.pEquipo1.setText("Puntaje: " + puntaje1);
->>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
                 ganador();
             } else {
                 int aux2 = cPlayers.getEquipo2().getPlayers().get(x).lanzarTejo();
@@ -302,24 +293,18 @@ public class controlMain implements ActionListener {
             }
         } else if (e.getSource() == this.vf.jSalir) {
             try {
-<<<<<<< HEAD
-                cArchivos.leerTodo();
-=======
                 salida();
                 this.vp.dispose();
                 this.vb.dispose();
                 this.vj.dispose();
                 this.vj2.dispose();
                 this.vf.dispose();
->>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
             } catch (Exception e2) {
-                
+                e2.printStackTrace();
             }
         } else if (e.getSource() == this.vf.jOtra) {
             vf.setVisible(false);
             vj2.setVisible(true);
-<<<<<<< HEAD
-=======
         } else if (e.getSource() == this.vj2.btnRegistrarJv2) {
             try {
                 crearJugadores();
@@ -337,8 +322,6 @@ public class controlMain implements ActionListener {
             }
             
             
->>>>>>> 395b4a3cd4a063276250c6114b93689554d89936
         }
-
     }
 }
