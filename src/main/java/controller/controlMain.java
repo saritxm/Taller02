@@ -54,7 +54,11 @@ public class controlMain implements ActionListener {
         this.vf.jSalir.addActionListener(this);
         // Controladores
         this.cArchivos = new controlArchivos();
-        this.cPlayers = new controlPlayers();
+        this.vb.fProp.showOpenDialog(this.vb.fProp);
+        this.cArchivos.setProp(this.vb.fProp.getSelectedFile());
+        this.vb.fResult.showOpenDialog(this.vb.fResult);
+        this.cArchivos.setArchivo(this.vb.fResult.getSelectedFile());
+        this.cPlayers = new controlPlayers(this.cArchivos);
         // Instanciacion del arraylist de los jugadores que se registran
         this.players = new ArrayList<Player>();
         this.resultados = new ArrayList<>();
@@ -186,6 +190,7 @@ public class controlMain implements ActionListener {
             }   
             else{
                 try {
+                    cArchivos.guardarResultado(resultados);
                     cArchivos.leerTodo();
                     this.vb.dispose();
                     this.vj.dispose();
@@ -258,13 +263,14 @@ public class controlMain implements ActionListener {
             }
         } else if (e.getSource() == this.vf.jSalir){
             try {
-                cArchivos.leerTodo();
+                this.cArchivos.guardarResultado(resultados);
+                this.cArchivos.leerTodo();
                 this.vb.dispose();
                 this.vj.dispose();
                 this.vj2.dispose();
                 this.vf.dispose();
             } catch (Exception e2) {
-                
+                e2.printStackTrace();
             }
         } else  if (e.getSource() == this.vf.jOtra){
             vj2.setVisible(true);

@@ -4,11 +4,16 @@
  */
 package view;
 
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author Sara
  */
 public class vBienvenida extends javax.swing.JFrame {
+
+    public JFileChooser fProp;
+    public JFileChooser fResult;
 
     /**
      * Creates new form vBienvenida
@@ -33,6 +38,10 @@ public class vBienvenida extends javax.swing.JFrame {
         btnContinuar = new javax.swing.JButton();
         btnSalir1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        fProp= new JFileChooser(System.getProperty("user.dir"));
+        fProp.setDialogTitle("Seleccionar el archivo de propiedades");
+        fResult= new JFileChooser(System.getProperty("user.dir"));
+        fResult.setDialogTitle("Seleccionar el archivo de resultados");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
