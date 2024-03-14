@@ -4,28 +4,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.io.File;
-
-import javax.swing.JFileChooser;
 
 import model.Player;
 import model.Team;
 
 public class controlPlayers {
     private controlArchivos cArchivos;
-    private File f;
-    private JFileChooser fc;
     private ArrayList<Team> equipos;
     private Team equipo1;
     private Team equipo2;
     private ArrayList<Player> players;
 
-    public controlPlayers() throws IOException{
-        fc= new JFileChooser(System.getProperty("user.dir"));
-        fc.showOpenDialog(fc);
-        f=fc.getSelectedFile();
-        this.cArchivos = new controlArchivos();
-        this.cArchivos.setProp(f);
+    public controlPlayers(controlArchivos cArchivos) throws IOException{
+        
+        this.cArchivos=cArchivos;
         this.cArchivos.obtenerEquipos();
         this.equipos = new ArrayList<>(this.cArchivos.getEquipos());
     }

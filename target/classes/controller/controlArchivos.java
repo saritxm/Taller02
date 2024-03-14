@@ -42,6 +42,7 @@ public class controlArchivos {
      * @throws IOException
      */
     public void obtenerEquipos() throws IOException {
+        equipos.clear();
         ArrayList<String> listaEq = new ArrayList<>();
         for (String key : prop.stringPropertyNames()) {
             if (key.startsWith("team")) {
@@ -127,7 +128,7 @@ public class controlArchivos {
             clave = archivo.readInt();
         } catch (FileNotFoundException fnfe) {/* Archivo no encontrado */
         } catch (IOException ioe) {
-            /* Error al escribir */
+            ioe.printStackTrace();
         }
         return clave;
     }
@@ -195,7 +196,7 @@ public class controlArchivos {
                             +nombrej1+" |  Jugador #2: "+nombrej2+" |  Jugador #3: "+nombrej3+" |  Jugador #4: "+nombrej4+" | Resultado: "+resultado);
 
             }
-        } catch (FileNotFoundException fnfe) {/* Archivo no encontrado */
+        } catch (FileNotFoundException fnfe) {fnfe.printStackTrace();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

@@ -2,12 +2,15 @@ package controller;
 
 import java.io.IOException;
 
-import view.Final;
-import view.vPartida;
+import javax.swing.JFileChooser;
 
 public class Launcher {
     public static void main(String[] args)  throws IOException{
-        new Final();
+        controlArchivos a= new controlArchivos();
+        JFileChooser fc= new JFileChooser(System.getProperty("user.dir"));
+        fc.showOpenDialog(fc);
+        a.setArchivo(fc.getSelectedFile());
+        a.leerTodo();
     }
     
 }
